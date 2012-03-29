@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		887F4AC6152495AF00FD6459 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F4AC5152495AF00FD6459 /* Cocoa.framework */; };
+		887F4AD0152495AF00FD6459 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 887F4ACE152495AF00FD6459 /* InfoPlist.strings */; };
+		887F4AD2152495AF00FD6459 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AD1152495AF00FD6459 /* main.m */; };
+		887F4AD6152495AF00FD6459 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 887F4AD4152495AF00FD6459 /* Credits.rtf */; };
+		887F4AD9152495AF00FD6459 /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AD8152495AF00FD6459 /* RCAppDelegate.m */; };
+		887F4ADC152495AF00FD6459 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F4ADA152495AF00FD6459 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		887F4AC1152495AF00FD6459 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		887F4AC5152495AF00FD6459 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		887F4AC8152495AF00FD6459 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		887F4AC9152495AF00FD6459 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		887F4ACA152495AF00FD6459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		887F4ACD152495AF00FD6459 /* Railcar-Info.plist */ = {isa = PBXFileReference; path = "Railcar-Info.plist"; sourceTree = "<group>"; };
+		887F4ACF152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		887F4AD1152495AF00FD6459 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		887F4AD3152495AF00FD6459 /* Railcar-Prefix.pch */ = {isa = PBXFileReference; path = "Railcar-Prefix.pch"; sourceTree = "<group>"; };
+		887F4AD5152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		887F4AD7152495AF00FD6459 /* RCAppDelegate.h */ = {isa = PBXFileReference; path = RCAppDelegate.h; sourceTree = "<group>"; };
+		887F4AD8152495AF00FD6459 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
+		887F4ADB152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		887F4ABE152495AF00FD6459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887F4AC6152495AF00FD6459 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		887F4AB6152495AF00FD6459 = {
+			isa = PBXGroup;
+			children = (
+				887F4ACB152495AF00FD6459 /* Railcar */,
+				887F4AC4152495AF00FD6459 /* Frameworks */,
+				887F4AC2152495AF00FD6459 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		887F4AC2152495AF00FD6459 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				887F4AC1152495AF00FD6459 /* Railcar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		887F4AC4152495AF00FD6459 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				887F4AC5152495AF00FD6459 /* Cocoa.framework */,
+				887F4AC7152495AF00FD6459 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		887F4AC7152495AF00FD6459 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				887F4AC8152495AF00FD6459 /* AppKit.framework */,
+				887F4AC9152495AF00FD6459 /* CoreData.framework */,
+				887F4ACA152495AF00FD6459 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		887F4ACB152495AF00FD6459 /* Railcar */ = {
+			isa = PBXGroup;
+			children = (
+				887F4AD7152495AF00FD6459 /* RCAppDelegate.h */,
+				887F4AD8152495AF00FD6459 /* RCAppDelegate.m */,
+				887F4ADA152495AF00FD6459 /* MainMenu.xib */,
+				887F4ACC152495AF00FD6459 /* Supporting Files */,
+			);
+			path = Railcar;
+			sourceTree = "<group>";
+		};
+		887F4ACC152495AF00FD6459 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				887F4ACD152495AF00FD6459 /* Railcar-Info.plist */,
+				887F4ACE152495AF00FD6459 /* InfoPlist.strings */,
+				887F4AD1152495AF00FD6459 /* main.m */,
+				887F4AD3152495AF00FD6459 /* Railcar-Prefix.pch */,
+				887F4AD4152495AF00FD6459 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		887F4AC0152495AF00FD6459 /* Railcar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 887F4ADF152495AF00FD6459 /* Build configuration list for PBXNativeTarget "Railcar" */;
+			buildPhases = (
+				887F4ABD152495AF00FD6459 /* Sources */,
+				887F4ABE152495AF00FD6459 /* Frameworks */,
+				887F4ABF152495AF00FD6459 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Railcar;
+			productName = Railcar;
+			productReference = 887F4AC1152495AF00FD6459 /* Railcar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		887F4AB8152495AF00FD6459 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Arcturo;
+			};
+			buildConfigurationList = 887F4ABB152495AF00FD6459 /* Build configuration list for PBXProject "Railcar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 887F4AB6152495AF00FD6459;
+			productRefGroup = 887F4AC2152495AF00FD6459 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				887F4AC0152495AF00FD6459 /* Railcar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		887F4ABF152495AF00FD6459 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887F4AD0152495AF00FD6459 /* InfoPlist.strings in Resources */,
+				887F4AD6152495AF00FD6459 /* Credits.rtf in Resources */,
+				887F4ADC152495AF00FD6459 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		887F4ABD152495AF00FD6459 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				887F4AD2152495AF00FD6459 /* main.m in Sources */,
+				887F4AD9152495AF00FD6459 /* RCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		887F4ACE152495AF00FD6459 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				887F4ACF152495AF00FD6459 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		887F4AD4152495AF00FD6459 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				887F4AD5152495AF00FD6459 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		887F4ADA152495AF00FD6459 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				887F4ADB152495AF00FD6459 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		887F4ADD152495AF00FD6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		887F4ADE152495AF00FD6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		887F4AE0152495AF00FD6459 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Railcar/Railcar-Prefix.pch";
+				INFOPLIST_FILE = "Railcar/Railcar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		887F4AE1152495AF00FD6459 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Railcar/Railcar-Prefix.pch";
+				INFOPLIST_FILE = "Railcar/Railcar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		887F4ABB152495AF00FD6459 /* Build configuration list for PBXProject "Railcar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				887F4ADD152495AF00FD6459 /* Debug */,
+				887F4ADE152495AF00FD6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		887F4ADF152495AF00FD6459 /* Build configuration list for PBXNativeTarget "Railcar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				887F4AE0152495AF00FD6459 /* Debug */,
+				887F4AE1152495AF00FD6459 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 887F4AB8152495AF00FD6459 /* Project object */;
+}
