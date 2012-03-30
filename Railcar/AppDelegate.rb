@@ -6,6 +6,7 @@
 #  Copyright 2012 Arcturo. All rights reserved.
 #
 require 'Configuration'
+framework 'Cocoa'
 
 class AppDelegate
   attr_accessor :window

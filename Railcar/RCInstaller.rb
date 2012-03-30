@@ -30,7 +30,7 @@ class RCInstaller
   end
 
   def needsRuby?
-    !(File.exist?(File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "rbenv", RBENV_VERSION, "versions", DEFAULT_RUBY_VERSION, "bin", "ruby")))
+    !(File.exist?(File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions", DEFAULT_RUBY_VERSION, "bin", "ruby")))
   end
 
   def checkForCompiler
@@ -69,7 +69,7 @@ class RCInstaller
   def installRuby(version = nil)  
     puts("installing ruby")
     buildPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "ruby-build-fork", "03292012", "bin", "ruby-build")
-    versionPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "rbenv", RBENV_VERSION, "versions", (version || DEFAULT_RUBY_VERSION))
+    versionPath = File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions", (version || DEFAULT_RUBY_VERSION))
     
     `CC='/usr/bin/gcc' #{buildPath} #{version || DEFAULT_RUBY_VERSION} #{versionPath}`
         
@@ -78,7 +78,7 @@ class RCInstaller
 
   def installDefaultGems(version = nil)
     puts("installing gems")
-    pathToInitializer = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh")
+    pathToInitializer = File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh")
     
     `source #{pathToInitializer} && rbenv exec gem install --no-rdoc --no-ri #{DEFAULT_GEMS}`
   
@@ -87,22 +87,26 @@ class RCInstaller
 
   def writeShellInitializer(version = nil)
     puts("writing out initializer")
-    rbenvPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "rbenv", RBENV_VERSION)
     
-    configuration = "export RBENV_ROOT=#{rbenvPath}
-    export PATH=#{File.join(rbenvPath, 'bin')}:$PATH
+    rbenvPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "rbenv", RBENV_VERSION, "bin")
+    rbenvRoot = File.join(NSBundle.mainBundle.bundlePath, "rbenv")
+    brewPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "bin")
+
+    configuration = "export RBENV_ROOT=#{rbenvRoot}
+    export PATH=#{rbenvPath}:#{brewPath}:$PATH
     eval \"$(rbenv init -)\"
     export RBENV_VERSION=\"#{version || DEFAULT_RUBY_VERSION}\"
     cd ~
     clear
-    echo 'Shell setup for Rails -- go nuts!'"
+    echo 'Railcar Shell -- Setup for #{version || DEFAULT_RUBY_VERSION}'"
     
-    File.open(File.join(NSBundle.mainBundle.bundlePath, "homebrew", "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh"), "w") do |f|
+    Dir.mkdir(File.join(NSBundle.mainBundle.bundlePath, "initializers")) rescue nil # don't care if it exists already
+    File.open(File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh"), "w") do |f|
       f.write(configuration)
     end
   end
 
   def needsInstall?
-    Dir.glob(File.join(NSBundle.mainBundle.bundlePath, "homebrew", "rbenv_init_*.sh")).empty?
+    Dir.glob(File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_*.sh")).empty?
   end
 end

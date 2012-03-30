@@ -62,9 +62,8 @@ class RCSetupWindowController < NSWindowController
   end
 
   def openConsole(sender)
-    pathToInitializer = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "rbenv_init_#{DEFAULT_RUBY_VERSION}.sh")
+    pathToInitializer = File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{DEFAULT_RUBY_VERSION}.sh")
     
-    NSWorkspace.sharedWorkspace.openFile("~/", withApplication:"Terminal");
     command = "tell application \"Terminal\" to do script \"source #{pathToInitializer}\""
     
     scriptRunner = NSAppleScript.alloc.initWithSource(command)

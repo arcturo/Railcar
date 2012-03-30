@@ -18,7 +18,6 @@
 		886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564AB1525E22300B63502 /* RCSetupWindowController.rb */; };
 		886564B21525EB7400B63502 /* Configuration.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564B11525EB7400B63502 /* Configuration.rb */; };
 		886564B41525EE6500B63502 /* SetupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886564B31525EE6500B63502 /* SetupWindow.xib */; };
-		886564B61525F16600B63502 /* install_gems.sh in Resources */ = {isa = PBXBuildFile; fileRef = 886564B51525F16600B63502 /* install_gems.sh */; };
 		886564B81525F17000B63502 /* install_brew.sh in Resources */ = {isa = PBXBuildFile; fileRef = 886564B71525F17000B63502 /* install_brew.sh */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		886564AB1525E22300B63502 /* RCSetupWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCSetupWindowController.rb; sourceTree = "<group>"; tabWidth = 2; };
 		886564B11525EB7400B63502 /* Configuration.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Configuration.rb; sourceTree = "<group>"; };
 		886564B31525EE6500B63502 /* SetupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupWindow.xib; sourceTree = "<group>"; };
-		886564B51525F16600B63502 /* install_gems.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_gems.sh; sourceTree = "<group>"; };
 		886564B71525F17000B63502 /* install_brew.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_brew.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +138,6 @@
 				886564A91525E1DD00B63502 /* RCInstaller.rb */,
 				886564B31525EE6500B63502 /* SetupWindow.xib */,
 				886564AB1525E22300B63502 /* RCSetupWindowController.rb */,
-				886564B51525F16600B63502 /* install_gems.sh */,
 				886564B71525F17000B63502 /* install_brew.sh */,
 			);
 			name = Installer;
@@ -223,7 +220,6 @@
 				886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */,
 				886564B21525EB7400B63502 /* Configuration.rb in Resources */,
 				886564B41525EE6500B63502 /* SetupWindow.xib in Resources */,
-				886564B61525F16600B63502 /* install_gems.sh in Resources */,
 				886564B81525F17000B63502 /* install_brew.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +377,7 @@
 				886564A21525E17800B63502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		886564A31525E17800B63502 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +386,7 @@
 				886564A51525E17800B63502 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
