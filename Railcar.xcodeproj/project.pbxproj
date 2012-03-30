@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
+		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
+		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
+		886564981525E17800B63502 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886564961525E17800B63502 /* MainMenu.xib */; };
+		8865649B1525E17800B63502 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8865649A1525E17800B63502 /* rb_main.rb */; };
+		8865649D1525E17800B63502 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8865649C1525E17800B63502 /* AppDelegate.rb */; };
+		886564A71525E18B00B63502 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564A61525E18B00B63502 /* MacRuby.framework */; };
+		886564AA1525E1DD00B63502 /* RCInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564A91525E1DD00B63502 /* RCInstaller.rb */; };
+		886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564AB1525E22300B63502 /* RCSetupWindowController.rb */; };
+		886564B21525EB7400B63502 /* Configuration.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564B11525EB7400B63502 /* Configuration.rb */; };
+		886564B41525EE6500B63502 /* SetupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886564B31525EE6500B63502 /* SetupWindow.xib */; };
+		886564B61525F16600B63502 /* install_gems.sh in Resources */ = {isa = PBXBuildFile; fileRef = 886564B51525F16600B63502 /* install_gems.sh */; };
+		886564B81525F17000B63502 /* install_brew.sh in Resources */ = {isa = PBXBuildFile; fileRef = 886564B71525F17000B63502 /* install_brew.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8865648A1525E17800B63502 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 886564781525E17800B63502 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 886564801525E17800B63502;
+			remoteInfo = Railcar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		8865648E1525E17800B63502 /* Railcar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Railcar-Info.plist"; sourceTree = "<group>"; };
+		886564901525E17800B63502 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		886564921525E17800B63502 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		886564941525E17800B63502 /* Railcar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Railcar-Prefix.pch"; sourceTree = "<group>"; };
+		886564971525E17800B63502 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8865649A1525E17800B63502 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		8865649C1525E17800B63502 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		886564A61525E18B00B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
+		886564A91525E1DD00B63502 /* RCInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCInstaller.rb; sourceTree = "<group>"; tabWidth = 2; };
+		886564AB1525E22300B63502 /* RCSetupWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCSetupWindowController.rb; sourceTree = "<group>"; tabWidth = 2; };
+		886564B11525EB7400B63502 /* Configuration.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Configuration.rb; sourceTree = "<group>"; };
+		886564B31525EE6500B63502 /* SetupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupWindow.xib; sourceTree = "<group>"; };
+		886564B51525F16600B63502 /* install_gems.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_gems.sh; sourceTree = "<group>"; };
+		886564B71525F17000B63502 /* install_brew.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_brew.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8865647E1525E17800B63502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886564A71525E18B00B63502 /* MacRuby.framework in Frameworks */,
+				886564861525E17800B63502 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		886564761525E17800B63502 = {
+			isa = PBXGroup;
+			children = (
+				886564A61525E18B00B63502 /* MacRuby.framework */,
+				8865648C1525E17800B63502 /* Railcar */,
+				886564841525E17800B63502 /* Frameworks */,
+				886564821525E17800B63502 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		886564821525E17800B63502 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				886564811525E17800B63502 /* Railcar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		886564841525E17800B63502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				886564851525E17800B63502 /* Cocoa.framework */,
+				886564871525E17800B63502 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8865648C1525E17800B63502 /* Railcar */ = {
+			isa = PBXGroup;
+			children = (
+				886564A81525E1C200B63502 /* Installer */,
+				8865649C1525E17800B63502 /* AppDelegate.rb */,
+				886564951525E17800B63502 /* Resources */,
+				886564991525E17800B63502 /* Other Sources */,
+				8865648D1525E17800B63502 /* Supporting Files */,
+				886564B11525EB7400B63502 /* Configuration.rb */,
+			);
+			path = Railcar;
+			sourceTree = "<group>";
+		};
+		8865648D1525E17800B63502 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8865648E1525E17800B63502 /* Railcar-Info.plist */,
+				8865648F1525E17800B63502 /* InfoPlist.strings */,
+				886564921525E17800B63502 /* main.m */,
+				886564941525E17800B63502 /* Railcar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		886564951525E17800B63502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				886564961525E17800B63502 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		886564991525E17800B63502 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8865649A1525E17800B63502 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		886564A81525E1C200B63502 /* Installer */ = {
+			isa = PBXGroup;
+			children = (
+				886564A91525E1DD00B63502 /* RCInstaller.rb */,
+				886564B31525EE6500B63502 /* SetupWindow.xib */,
+				886564AB1525E22300B63502 /* RCSetupWindowController.rb */,
+				886564B51525F16600B63502 /* install_gems.sh */,
+				886564B71525F17000B63502 /* install_brew.sh */,
+			);
+			name = Installer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		886564891525E17800B63502 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 886564A31525E17800B63502 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+				8865648B1525E17800B63502 /* PBXTargetDependency */,
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		886564801525E17800B63502 /* Railcar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 886564A01525E17800B63502 /* Build configuration list for PBXNativeTarget "Railcar" */;
+			buildPhases = (
+				8865647D1525E17800B63502 /* Sources */,
+				8865647E1525E17800B63502 /* Frameworks */,
+				8865647F1525E17800B63502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Railcar;
+			productName = Railcar;
+			productReference = 886564811525E17800B63502 /* Railcar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		886564781525E17800B63502 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Arcturo;
+			};
+			buildConfigurationList = 8865647B1525E17800B63502 /* Build configuration list for PBXProject "Railcar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 886564761525E17800B63502;
+			productRefGroup = 886564821525E17800B63502 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				886564801525E17800B63502 /* Railcar */,
+				886564891525E17800B63502 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8865647F1525E17800B63502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886564911525E17800B63502 /* InfoPlist.strings in Resources */,
+				886564981525E17800B63502 /* MainMenu.xib in Resources */,
+				8865649B1525E17800B63502 /* rb_main.rb in Resources */,
+				8865649D1525E17800B63502 /* AppDelegate.rb in Resources */,
+				886564AA1525E1DD00B63502 /* RCInstaller.rb in Resources */,
+				886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */,
+				886564B21525EB7400B63502 /* Configuration.rb in Resources */,
+				886564B41525EE6500B63502 /* SetupWindow.xib in Resources */,
+				886564B61525F16600B63502 /* install_gems.sh in Resources */,
+				886564B81525F17000B63502 /* install_brew.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8865647D1525E17800B63502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				886564931525E17800B63502 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8865648B1525E17800B63502 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 886564801525E17800B63502 /* Railcar */;
+			targetProxy = 8865648A1525E17800B63502 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8865648F1525E17800B63502 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				886564901525E17800B63502 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		886564961525E17800B63502 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				886564971525E17800B63502 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8865649E1525E17800B63502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8865649F1525E17800B63502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		886564A11525E17800B63502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Railcar/Railcar-Prefix.pch";
+				INFOPLIST_FILE = "Railcar/Railcar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		886564A21525E17800B63502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Railcar/Railcar-Prefix.pch";
+				INFOPLIST_FILE = "Railcar/Railcar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		886564A41525E17800B63502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		886564A51525E17800B63502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8865647B1525E17800B63502 /* Build configuration list for PBXProject "Railcar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8865649E1525E17800B63502 /* Debug */,
+				8865649F1525E17800B63502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		886564A01525E17800B63502 /* Build configuration list for PBXNativeTarget "Railcar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886564A11525E17800B63502 /* Debug */,
+				886564A21525E17800B63502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		886564A31525E17800B63502 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				886564A41525E17800B63502 /* Debug */,
+				886564A51525E17800B63502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 886564781525E17800B63502 /* Project object */;
+}
