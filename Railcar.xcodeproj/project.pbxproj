@@ -7,28 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88660D8F152537430074ED2E /* Rails_Logo_250x250.png in Resources */ = {isa = PBXBuildFile; fileRef = 88660D8E152537430074ED2E /* Rails_Logo_250x250.png */; };
 		887F4AC6152495AF00FD6459 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887F4AC5152495AF00FD6459 /* Cocoa.framework */; };
 		887F4AD0152495AF00FD6459 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 887F4ACE152495AF00FD6459 /* InfoPlist.strings */; };
 		887F4AD2152495AF00FD6459 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AD1152495AF00FD6459 /* main.m */; };
 		887F4AD6152495AF00FD6459 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 887F4AD4152495AF00FD6459 /* Credits.rtf */; };
 		887F4AD9152495AF00FD6459 /* RCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AD8152495AF00FD6459 /* RCAppDelegate.m */; };
 		887F4ADC152495AF00FD6459 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F4ADA152495AF00FD6459 /* MainMenu.xib */; };
+		887F4AE4152495ED00FD6459 /* RCInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AE3152495ED00FD6459 /* RCInstaller.m */; };
+		887F4AE81524985600FD6459 /* RCSetupWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AE71524985600FD6459 /* RCSetupWindowController.m */; };
+		887F4AEA1524989200FD6459 /* SetupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 887F4AE91524989200FD6459 /* SetupWindow.xib */; };
+		887F4AED15249A3D00FD6459 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 887F4AEC15249A3D00FD6459 /* Constants.m */; };
+		887F4AEF1524B2D900FD6459 /* install_brew.sh in Resources */ = {isa = PBXBuildFile; fileRef = 887F4AEE1524B2D900FD6459 /* install_brew.sh */; };
+		887F4AF11524BE1C00FD6459 /* install_gems.sh in Resources */ = {isa = PBXBuildFile; fileRef = 887F4AF01524BE1C00FD6459 /* install_gems.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88660D8E152537430074ED2E /* Rails_Logo_250x250.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rails_Logo_250x250.png; sourceTree = "<group>"; };
 		887F4AC1152495AF00FD6459 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		887F4AC5152495AF00FD6459 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		887F4AC8152495AF00FD6459 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		887F4AC9152495AF00FD6459 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		887F4ACA152495AF00FD6459 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		887F4ACD152495AF00FD6459 /* Railcar-Info.plist */ = {isa = PBXFileReference; path = "Railcar-Info.plist"; sourceTree = "<group>"; };
+		887F4ACD152495AF00FD6459 /* Railcar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Railcar-Info.plist"; sourceTree = "<group>"; };
 		887F4ACF152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		887F4AD1152495AF00FD6459 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		887F4AD3152495AF00FD6459 /* Railcar-Prefix.pch */ = {isa = PBXFileReference; path = "Railcar-Prefix.pch"; sourceTree = "<group>"; };
+		887F4AD3152495AF00FD6459 /* Railcar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Railcar-Prefix.pch"; sourceTree = "<group>"; };
 		887F4AD5152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		887F4AD7152495AF00FD6459 /* RCAppDelegate.h */ = {isa = PBXFileReference; path = RCAppDelegate.h; sourceTree = "<group>"; };
+		887F4AD7152495AF00FD6459 /* RCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCAppDelegate.h; sourceTree = "<group>"; };
 		887F4AD8152495AF00FD6459 /* RCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCAppDelegate.m; sourceTree = "<group>"; };
 		887F4ADB152495AF00FD6459 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		887F4AE2152495ED00FD6459 /* RCInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCInstaller.h; sourceTree = "<group>"; };
+		887F4AE3152495ED00FD6459 /* RCInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCInstaller.m; sourceTree = "<group>"; };
+		887F4AE5152496E000FD6459 /* RCInstallerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCInstallerDelegate.h; sourceTree = "<group>"; };
+		887F4AE61524985600FD6459 /* RCSetupWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSetupWindowController.h; sourceTree = "<group>"; };
+		887F4AE71524985600FD6459 /* RCSetupWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSetupWindowController.m; sourceTree = "<group>"; };
+		887F4AE91524989200FD6459 /* SetupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupWindow.xib; sourceTree = "<group>"; };
+		887F4AEB15249A3D00FD6459 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		887F4AEC15249A3D00FD6459 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		887F4AEE1524B2D900FD6459 /* install_brew.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_brew.sh; sourceTree = "<group>"; };
+		887F4AF01524BE1C00FD6459 /* install_gems.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_gems.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +64,7 @@
 		887F4AB6152495AF00FD6459 = {
 			isa = PBXGroup;
 			children = (
+				88660D8E152537430074ED2E /* Rails_Logo_250x250.png */,
 				887F4ACB152495AF00FD6459 /* Railcar */,
 				887F4AC4152495AF00FD6459 /* Frameworks */,
 				887F4AC2152495AF00FD6459 /* Products */,
@@ -84,6 +103,16 @@
 			children = (
 				887F4AD7152495AF00FD6459 /* RCAppDelegate.h */,
 				887F4AD8152495AF00FD6459 /* RCAppDelegate.m */,
+				887F4AE61524985600FD6459 /* RCSetupWindowController.h */,
+				887F4AE71524985600FD6459 /* RCSetupWindowController.m */,
+				887F4AE91524989200FD6459 /* SetupWindow.xib */,
+				887F4AE2152495ED00FD6459 /* RCInstaller.h */,
+				887F4AE5152496E000FD6459 /* RCInstallerDelegate.h */,
+				887F4AE3152495ED00FD6459 /* RCInstaller.m */,
+				887F4AF01524BE1C00FD6459 /* install_gems.sh */,
+				887F4AEE1524B2D900FD6459 /* install_brew.sh */,
+				887F4AEB15249A3D00FD6459 /* Constants.h */,
+				887F4AEC15249A3D00FD6459 /* Constants.m */,
 				887F4ADA152495AF00FD6459 /* MainMenu.xib */,
 				887F4ACC152495AF00FD6459 /* Supporting Files */,
 			);
@@ -156,6 +185,10 @@
 				887F4AD0152495AF00FD6459 /* InfoPlist.strings in Resources */,
 				887F4AD6152495AF00FD6459 /* Credits.rtf in Resources */,
 				887F4ADC152495AF00FD6459 /* MainMenu.xib in Resources */,
+				887F4AEA1524989200FD6459 /* SetupWindow.xib in Resources */,
+				887F4AEF1524B2D900FD6459 /* install_brew.sh in Resources */,
+				887F4AF11524BE1C00FD6459 /* install_gems.sh in Resources */,
+				88660D8F152537430074ED2E /* Rails_Logo_250x250.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +201,9 @@
 			files = (
 				887F4AD2152495AF00FD6459 /* main.m in Sources */,
 				887F4AD9152495AF00FD6459 /* RCAppDelegate.m in Sources */,
+				887F4AE4152495ED00FD6459 /* RCInstaller.m in Sources */,
+				887F4AE81524985600FD6459 /* RCSetupWindowController.m in Sources */,
+				887F4AED15249A3D00FD6459 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +325,7 @@
 				887F4AE1152495AF00FD6459 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

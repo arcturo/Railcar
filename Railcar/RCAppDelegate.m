@@ -14,7 +14,13 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    RCInstaller * installer = [RCInstaller new];
+    
+    RCSetupWindowController * windowController = [[RCSetupWindowController alloc] initWithWindowNibName:@"SetupWindow"];
+    installer.delegate = windowController;
+    windowController.installer = installer;
+    
+    [[windowController window] makeKeyAndOrderFront:self];
 }
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RCInstaller.h"
+#import "RCSetupWindowController.h"
 
 @interface RCAppDelegate : NSObject <NSApplicationDelegate>
 
