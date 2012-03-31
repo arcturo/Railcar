@@ -6,24 +6,15 @@
 #  Copyright 2012 Arcturo. All rights reserved.
 #
 
-class RCMainWindowController < NSWindowController  
+class RCMainWindowController < NSWindowController 
+  attr_accessor :packages_button
+  
   def windowDidLoad
     super
   end
-  
-  def launchApplication
-    
-  end
 
-  def launchConsole
-    
-  end
-
-  def configureApplication
-    
-  end
-
-  def viewSettings
-    
+  def managePackages(sender)
+    windowController = RCMainWindowController.alloc.initWithWindowNibName("PackageManagementWindow")      
+    windowController.window.makeKeyAndOrderFront(self)
   end
 end
