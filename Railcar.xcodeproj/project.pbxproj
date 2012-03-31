@@ -19,7 +19,7 @@
 		8865649B1525E17800B63502 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8865649A1525E17800B63502 /* rb_main.rb */; };
 		8865649D1525E17800B63502 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 8865649C1525E17800B63502 /* AppDelegate.rb */; };
 		886564A71525E18B00B63502 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564A61525E18B00B63502 /* MacRuby.framework */; };
-		886564AA1525E1DD00B63502 /* RCInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564A91525E1DD00B63502 /* RCInstaller.rb */; };
+		886564AA1525E1DD00B63502 /* RCBootstrapper.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564A91525E1DD00B63502 /* RCBootstrapper.rb */; };
 		886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564AB1525E22300B63502 /* RCSetupWindowController.rb */; };
 		886564B21525EB7400B63502 /* Configuration.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564B11525EB7400B63502 /* Configuration.rb */; };
 		886564B41525EE6500B63502 /* SetupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886564B31525EE6500B63502 /* SetupWindow.xib */; };
@@ -53,7 +53,7 @@
 		8865649A1525E17800B63502 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		8865649C1525E17800B63502 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		886564A61525E18B00B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = SDKROOT; };
-		886564A91525E1DD00B63502 /* RCInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCInstaller.rb; sourceTree = "<group>"; tabWidth = 2; };
+		886564A91525E1DD00B63502 /* RCBootstrapper.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCBootstrapper.rb; sourceTree = "<group>"; tabWidth = 2; };
 		886564AB1525E22300B63502 /* RCSetupWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.ruby; path = RCSetupWindowController.rb; sourceTree = "<group>"; tabWidth = 2; };
 		886564B11525EB7400B63502 /* Configuration.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Configuration.rb; sourceTree = "<group>"; };
 		886564B31525EE6500B63502 /* SetupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupWindow.xib; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		886564A81525E1C200B63502 /* Installer */ = {
 			isa = PBXGroup;
 			children = (
-				886564A91525E1DD00B63502 /* RCInstaller.rb */,
+				886564A91525E1DD00B63502 /* RCBootstrapper.rb */,
 				886564B31525EE6500B63502 /* SetupWindow.xib */,
 				886564AB1525E22300B63502 /* RCSetupWindowController.rb */,
 				886564B71525F17000B63502 /* install_brew.sh */,
@@ -247,7 +247,7 @@
 				886564981525E17800B63502 /* MainMenu.xib in Resources */,
 				8865649B1525E17800B63502 /* rb_main.rb in Resources */,
 				8865649D1525E17800B63502 /* AppDelegate.rb in Resources */,
-				886564AA1525E1DD00B63502 /* RCInstaller.rb in Resources */,
+				886564AA1525E1DD00B63502 /* RCBootstrapper.rb in Resources */,
 				886564AC1525E22300B63502 /* RCSetupWindowController.rb in Resources */,
 				886564B21525EB7400B63502 /* Configuration.rb in Resources */,
 				886564B41525EE6500B63502 /* SetupWindow.xib in Resources */,
