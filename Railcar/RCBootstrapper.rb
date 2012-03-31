@@ -1,4 +1,4 @@
-class RCInstaller
+class RCBootstrapper
   attr_accessor :delegate
   
   def installDependencies

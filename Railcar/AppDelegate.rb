@@ -12,7 +12,7 @@ class AppDelegate
   attr_accessor :window
   
   def applicationDidFinishLaunching(a_notification)
-    installer = RCInstaller.new
+    installer = RCBootstrapper.new
     
     if installer.needsInstall?
       windowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")

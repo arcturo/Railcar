@@ -126,7 +126,7 @@
 			children = (
 				883ADAE915269C88000F55D5 /* Settings UI */,
 				883ADAE215264AD1000F55D5 /* Main UI / Application management */,
-				886564A81525E1C200B63502 /* Installer */,
+				886564A81525E1C200B63502 /* Bootstrapper */,
 				8865649C1525E17800B63502 /* AppDelegate.rb */,
 				886564951525E17800B63502 /* Resources */,
 				886564991525E17800B63502 /* Other Sources */,
@@ -163,7 +163,7 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		886564A81525E1C200B63502 /* Installer */ = {
+		886564A81525E1C200B63502 /* Bootstrapper */ = {
 			isa = PBXGroup;
 			children = (
 				886564A91525E1DD00B63502 /* RCBootstrapper.rb */,
@@ -171,7 +171,7 @@
 				886564AB1525E22300B63502 /* RCSetupWindowController.rb */,
 				886564B71525F17000B63502 /* install_brew.sh */,
 			);
-			name = Installer;
+			name = Bootstrapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
