@@ -69,12 +69,9 @@ class RCBootstrapper
 
   def installRuby(version = nil)  
     puts("installing ruby")
-    buildPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "ruby-build-fork", "03292012", "bin", "ruby-build")
-    versionPath = File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions", (version || DEFAULT_RUBY_VERSION))
     
-    `CC='/usr/bin/gcc' #{buildPath} #{version || DEFAULT_RUBY_VERSION} #{versionPath}`
-        
-    ($?.exitstatus > 0) ? raise("Ruby install failed!") : delegate.rubyInstalled
+    rubyInstaller = RCRubyInstaller.new
+    rubyInstaller.install(version || DEFAULT_RUBY_VERSION) ? delegate.rubyInstalled : raise("Ruby install failed!")
   end
 
   def installDefaultGems(version = nil)
