@@ -1,3 +1,6 @@
+require 'RCBrewPackageInstaller'
+require 'RCRubyInstaller'
+
 class RCBootstrapper
   attr_accessor :delegate
   
@@ -57,13 +60,11 @@ class RCBootstrapper
   
   def installRbenv
     puts("installing rbenv")
-    brewPath = File.join(NSBundle.mainBundle.bundlePath, "homebrew", "bin", "brew")
+    brewInstaller = RCBrewPackageInstaller.new
 
-    `#{brewPath} install rbenv`
-    raise "RbEnv install failed!" if ($?.exitstatus > 0)
+    raise "RbEnv install failed!" unless brewInstaller.install("rbenv")
 
-    `#{brewPath} install ruby-build-fork`
-    ($?.exitstatus > 0) ? raise("ruby-build install failed!") : delegate.rbenvInstalled
+    brewInstaller.install("ruby-build-fork") ? delegate.rbenvInstalled : raise("ruby-build install failed!")
   end
 
   def installRuby(version = nil)  

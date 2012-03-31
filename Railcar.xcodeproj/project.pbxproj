@@ -12,6 +12,8 @@
 		883ADAE815269829000F55D5 /* RCApplicationListDataSource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAE715269829000F55D5 /* RCApplicationListDataSource.rb */; };
 		883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */; };
 		883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEC15269D20000F55D5 /* SettingsWindow.xib */; };
+		883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */; };
+		883ADAF215276A65000F55D5 /* RCBrewPackageInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */; };
 		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
 		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
 		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
@@ -42,6 +44,8 @@
 		883ADAE715269829000F55D5 /* RCApplicationListDataSource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationListDataSource.rb; sourceTree = "<group>"; };
 		883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCSettingsWindowController.rb; sourceTree = "<group>"; };
 		883ADAEC15269D20000F55D5 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
+		883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCRubyInstaller.rb; sourceTree = "<group>"; };
+		883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCBrewPackageInstaller.rb; sourceTree = "<group>"; };
 		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -92,6 +96,15 @@
 			name = "Settings UI";
 			sourceTree = "<group>";
 		};
+		883ADAEE15276A4A000F55D5 /* Installers */ = {
+			isa = PBXGroup;
+			children = (
+				883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */,
+				883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */,
+			);
+			name = Installers;
+			sourceTree = "<group>";
+		};
 		886564761525E17800B63502 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 		8865648C1525E17800B63502 /* Railcar */ = {
 			isa = PBXGroup;
 			children = (
+				883ADAEE15276A4A000F55D5 /* Installers */,
 				883ADAE915269C88000F55D5 /* Settings UI */,
 				883ADAE215264AD1000F55D5 /* Main UI / Application management */,
 				886564A81525E1C200B63502 /* Bootstrapper */,
@@ -257,6 +271,8 @@
 				883ADAE815269829000F55D5 /* RCApplicationListDataSource.rb in Resources */,
 				883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */,
 				883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */,
+				883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */,
+				883ADAF215276A65000F55D5 /* RCBrewPackageInstaller.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
