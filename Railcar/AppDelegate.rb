@@ -13,12 +13,17 @@ class AppDelegate
   
   def applicationDidFinishLaunching(a_notification)
     installer = RCInstaller.new
-      
-    windowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")
-    installer.delegate = windowController;
-    windowController.installer = installer;
-      
-    windowController.window.makeKeyAndOrderFront(self)
+    
+    if installer.needsInstall?
+      windowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")
+      installer.delegate = windowController;
+      windowController.installer = installer;
+        
+      windowController.window.makeKeyAndOrderFront(self)
+    else
+      windowController = RCMainWindowController.alloc.initWithWindowNibName("MainWindow")      
+      windowController.window.makeKeyAndOrderFront(self)
+    end
   end
 end
 
