@@ -72,7 +72,7 @@
 											<string key="NSFrameSize">{704, 507}</string>
 											<reference key="NSSuperview" ref="107295885"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="951323810"/>
+											<reference key="NSNextKeyView" ref="977668556"/>
 											<string key="NSReuseIdentifierKey">_NS:1828</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="_NSCornerView" key="NSCornerView">
@@ -185,7 +185,6 @@
 									<string key="NSFrame">{{689, 0}, {15, 507}}</string>
 									<reference key="NSSuperview" ref="220806859"/>
 									<reference key="NSWindow"/>
-									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:1845</string>
 									<reference key="NSTarget" ref="220806859"/>
 									<string key="NSAction">_doScroller:</string>
@@ -208,7 +207,7 @@
 							<string key="NSFrame">{{-1, -1}, {704, 507}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="977668556"/>
+							<reference key="NSNextKeyView" ref="107295885"/>
 							<string key="NSReuseIdentifierKey">_NS:1824</string>
 							<int key="NSsFlags">133136</int>
 							<reference key="NSVScroller" ref="951323810"/>
@@ -356,6 +355,14 @@
 						<reference key="destination" ref="580257063"/>
 					</object>
 					<int key="connectionID">42</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">manageVersions:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="559448288"/>
+					</object>
+					<int key="connectionID">43</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -597,7 +604,7 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">42</int>
+			<int key="maxID">43</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -614,14 +621,35 @@
 					<string key="className">RCMainWindowController</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">managePackages:</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>managePackages:</string>
+							<string>manageVersions:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">managePackages:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">managePackages:</string>
-							<string key="candidateClassName">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>managePackages:</string>
+							<string>manageVersions:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">managePackages:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">manageVersions:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">

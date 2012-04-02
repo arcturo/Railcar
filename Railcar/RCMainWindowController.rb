@@ -14,7 +14,12 @@ class RCMainWindowController < NSWindowController
   end
 
   def managePackages(sender)
-    @windowController ||= RCPackageManagementWindowController.alloc.initWithWindowNibName("PackageManagementWindow")
-    @windowController.window.makeKeyAndOrderFront(self)
+    @packageWindowController ||= RCPackageManagementWindowController.alloc.initWithWindowNibName("PackageManagementWindow")
+    @packageWindowController.window.makeKeyAndOrderFront(self)
+  end
+  
+  def manageVersions(sender)
+    @versionsWindowController ||= RCVersionManagementWindowController.alloc.initWithWindowNibName("RubyManagementWindow")
+    @versionsWindowController.window.makeKeyAndOrderFront(self)
   end
 end

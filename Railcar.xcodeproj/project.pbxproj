@@ -34,6 +34,12 @@
 		883ADB23152950B5000F55D5 /* scala.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB22152950B5000F55D5 /* scala.png */; };
 		883ADB25152950C0000F55D5 /* python.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB24152950C0000F55D5 /* python.png */; };
 		883ADB27152955A7000F55D5 /* RCRubyManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB26152955A7000F55D5 /* RCRubyManager.rb */; };
+		883ADB2A15295709000F55D5 /* RubyManagementWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB2915295709000F55D5 /* RubyManagementWindow.xib */; };
+		883ADB2F152958E2000F55D5 /* rbx.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB2E152958E2000F55D5 /* rbx.png */; };
+		883ADB31152958F3000F55D5 /* cruby.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB30152958F3000F55D5 /* cruby.png */; };
+		883ADB33152958FC000F55D5 /* jruby.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB32152958FC000F55D5 /* jruby.png */; };
+		883ADB3515295C5E000F55D5 /* maglev.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3415295C5E000F55D5 /* maglev.png */; };
+		883ADB3715295F11000F55D5 /* RCVersionManagementWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */; };
 		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
 		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
 		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
@@ -86,6 +92,12 @@
 		883ADB22152950B5000F55D5 /* scala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scala.png; sourceTree = "<group>"; };
 		883ADB24152950C0000F55D5 /* python.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = python.png; sourceTree = "<group>"; };
 		883ADB26152955A7000F55D5 /* RCRubyManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCRubyManager.rb; sourceTree = "<group>"; };
+		883ADB2915295709000F55D5 /* RubyManagementWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RubyManagementWindow.xib; sourceTree = "<group>"; };
+		883ADB2E152958E2000F55D5 /* rbx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rbx.png; sourceTree = "<group>"; };
+		883ADB30152958F3000F55D5 /* cruby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cruby.png; sourceTree = "<group>"; };
+		883ADB32152958FC000F55D5 /* jruby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jruby.png; sourceTree = "<group>"; };
+		883ADB3415295C5E000F55D5 /* maglev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maglev.png; sourceTree = "<group>"; };
+		883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCVersionManagementWindowController.rb; sourceTree = "<group>"; };
 		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -188,6 +200,27 @@
 			name = "Data sources";
 			sourceTree = "<group>";
 		};
+		883ADB2815295636000F55D5 /* Ruby Manager UI */ = {
+			isa = PBXGroup;
+			children = (
+				883ADB2B1529578B000F55D5 /* Images */,
+				883ADB2915295709000F55D5 /* RubyManagementWindow.xib */,
+				883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */,
+			);
+			name = "Ruby Manager UI";
+			sourceTree = "<group>";
+		};
+		883ADB2B1529578B000F55D5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				883ADB2E152958E2000F55D5 /* rbx.png */,
+				883ADB3415295C5E000F55D5 /* maglev.png */,
+				883ADB32152958FC000F55D5 /* jruby.png */,
+				883ADB30152958F3000F55D5 /* cruby.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		886564761525E17800B63502 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +253,7 @@
 		8865648C1525E17800B63502 /* Railcar */ = {
 			isa = PBXGroup;
 			children = (
+				883ADB2815295636000F55D5 /* Ruby Manager UI */,
 				883ADAF315277544000F55D5 /* Package Management UI */,
 				883ADAEE15276A4A000F55D5 /* Installers */,
 				883ADAE915269C88000F55D5 /* Settings UI */,
@@ -377,6 +411,12 @@
 				883ADB23152950B5000F55D5 /* scala.png in Resources */,
 				883ADB25152950C0000F55D5 /* python.png in Resources */,
 				883ADB27152955A7000F55D5 /* RCRubyManager.rb in Resources */,
+				883ADB2A15295709000F55D5 /* RubyManagementWindow.xib in Resources */,
+				883ADB2F152958E2000F55D5 /* rbx.png in Resources */,
+				883ADB31152958F3000F55D5 /* cruby.png in Resources */,
+				883ADB33152958FC000F55D5 /* jruby.png in Resources */,
+				883ADB3515295C5E000F55D5 /* maglev.png in Resources */,
+				883ADB3715295F11000F55D5 /* RCVersionManagementWindowController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
