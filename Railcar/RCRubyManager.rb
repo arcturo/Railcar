@@ -6,7 +6,7 @@
 #  Copyright 2012 Arcturo. All rights reserved.
 #
 
-class RCRubyInstaller
+class RCRubyManager
   def buildPath
     File.join(NSBundle.mainBundle.bundlePath, "homebrew", "Cellar", "ruby-build-fork", "03292012", "bin", "ruby-build")
   end
