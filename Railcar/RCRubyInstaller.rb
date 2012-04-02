@@ -20,4 +20,17 @@ class RCRubyInstaller
     
     ($?.exitstatus == 0)
   end
+
+  def refreshInstalledVersions
+    @installedVersions = nil
+    installedVersions
+  end
+
+  def installedVersions
+    @installedVersions ||= `rbenv versions`.split("\n").map {|l| l.split(" ")[1] || l.strip}
+  end
+
+  def installed?(version)
+    installedVersions.include?(version)
+  end
 end
