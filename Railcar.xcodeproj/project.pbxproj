@@ -13,7 +13,7 @@
 		883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */; };
 		883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEC15269D20000F55D5 /* SettingsWindow.xib */; };
 		883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */; };
-		883ADAF215276A65000F55D5 /* RCBrewPackageInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */; };
+		883ADAF215276A65000F55D5 /* RCBrewManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF115276A65000F55D5 /* RCBrewManager.rb */; };
 		883ADAF515277558000F55D5 /* PackageManagementWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF415277558000F55D5 /* PackageManagementWindow.xib */; };
 		883ADAF71527756A000F55D5 /* RCPackageManagementWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF61527756A000F55D5 /* RCPackageManagementWindowController.rb */; };
 		883ADAF915277B1F000F55D5 /* RCAvailablePackages.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF815277B1F000F55D5 /* RCAvailablePackages.rb */; };
@@ -22,6 +22,18 @@
 		883ADB011527858D000F55D5 /* mysql.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB001527858D000F55D5 /* mysql.png */; };
 		883ADB0315278721000F55D5 /* pgsql.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB0215278721000F55D5 /* pgsql.png */; };
 		883ADB0515278898000F55D5 /* mongo.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB0415278898000F55D5 /* mongo.png */; };
+		883ADB0B152902BB000F55D5 /* redis.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB0A152902BB000F55D5 /* redis.png */; };
+		883ADB0D152906A8000F55D5 /* memcached.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB0C152906A8000F55D5 /* memcached.png */; };
+		883ADB0F152906AE000F55D5 /* riak.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB0E152906AE000F55D5 /* riak.png */; };
+		883ADB11152906B1000F55D5 /* couchdb.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB10152906B1000F55D5 /* couchdb.png */; };
+		883ADB1315294598000F55D5 /* RCLanguagePackageDataSource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB1215294598000F55D5 /* RCLanguagePackageDataSource.rb */; };
+		883ADB15152945A3000F55D5 /* RCLibraryPackageDataSource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB14152945A3000F55D5 /* RCLibraryPackageDataSource.rb */; };
+		883ADB1B15294E67000F55D5 /* erlang.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB1A15294E67000F55D5 /* erlang.png */; };
+		883ADB1D15294E72000F55D5 /* clojure.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB1C15294E72000F55D5 /* clojure.png */; };
+		883ADB1F15294EEC000F55D5 /* node.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB1E15294EEC000F55D5 /* node.png */; };
+		883ADB2115294F9C000F55D5 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB2015294F9C000F55D5 /* default.png */; };
+		883ADB23152950B5000F55D5 /* scala.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB22152950B5000F55D5 /* scala.png */; };
+		883ADB25152950C0000F55D5 /* python.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB24152950C0000F55D5 /* python.png */; };
 		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
 		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
 		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
@@ -53,7 +65,7 @@
 		883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCSettingsWindowController.rb; sourceTree = "<group>"; };
 		883ADAEC15269D20000F55D5 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
 		883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCRubyInstaller.rb; sourceTree = "<group>"; };
-		883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCBrewPackageInstaller.rb; sourceTree = "<group>"; };
+		883ADAF115276A65000F55D5 /* RCBrewManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCBrewManager.rb; sourceTree = "<group>"; };
 		883ADAF415277558000F55D5 /* PackageManagementWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageManagementWindow.xib; sourceTree = "<group>"; };
 		883ADAF61527756A000F55D5 /* RCPackageManagementWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCPackageManagementWindowController.rb; sourceTree = "<group>"; };
 		883ADAF815277B1F000F55D5 /* RCAvailablePackages.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCAvailablePackages.rb; sourceTree = "<group>"; };
@@ -62,6 +74,18 @@
 		883ADB001527858D000F55D5 /* mysql.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mysql.png; sourceTree = "<group>"; };
 		883ADB0215278721000F55D5 /* pgsql.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pgsql.png; sourceTree = "<group>"; };
 		883ADB0415278898000F55D5 /* mongo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mongo.png; sourceTree = "<group>"; };
+		883ADB0A152902BB000F55D5 /* redis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redis.png; sourceTree = "<group>"; };
+		883ADB0C152906A8000F55D5 /* memcached.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memcached.png; sourceTree = "<group>"; };
+		883ADB0E152906AE000F55D5 /* riak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = riak.png; sourceTree = "<group>"; };
+		883ADB10152906B1000F55D5 /* couchdb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = couchdb.png; sourceTree = "<group>"; };
+		883ADB1215294598000F55D5 /* RCLanguagePackageDataSource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCLanguagePackageDataSource.rb; sourceTree = "<group>"; };
+		883ADB14152945A3000F55D5 /* RCLibraryPackageDataSource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCLibraryPackageDataSource.rb; sourceTree = "<group>"; };
+		883ADB1A15294E67000F55D5 /* erlang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = erlang.png; sourceTree = "<group>"; };
+		883ADB1C15294E72000F55D5 /* clojure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clojure.png; sourceTree = "<group>"; };
+		883ADB1E15294EEC000F55D5 /* node.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = node.png; sourceTree = "<group>"; };
+		883ADB2015294F9C000F55D5 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		883ADB22152950B5000F55D5 /* scala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scala.png; sourceTree = "<group>"; };
+		883ADB24152950C0000F55D5 /* python.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = python.png; sourceTree = "<group>"; };
 		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -116,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */,
-				883ADAF115276A65000F55D5 /* RCBrewPackageInstaller.rb */,
+				883ADAF115276A65000F55D5 /* RCBrewManager.rb */,
 			);
 			name = Installers;
 			sourceTree = "<group>";
@@ -138,6 +162,16 @@
 			children = (
 				883ADB0415278898000F55D5 /* mongo.png */,
 				883ADB0215278721000F55D5 /* pgsql.png */,
+				883ADB1E15294EEC000F55D5 /* node.png */,
+				883ADB24152950C0000F55D5 /* python.png */,
+				883ADB22152950B5000F55D5 /* scala.png */,
+				883ADB1C15294E72000F55D5 /* clojure.png */,
+				883ADB1A15294E67000F55D5 /* erlang.png */,
+				883ADB2015294F9C000F55D5 /* default.png */,
+				883ADB0C152906A8000F55D5 /* memcached.png */,
+				883ADB0A152902BB000F55D5 /* redis.png */,
+				883ADB10152906B1000F55D5 /* couchdb.png */,
+				883ADB0E152906AE000F55D5 /* riak.png */,
 				883ADB001527858D000F55D5 /* mysql.png */,
 			);
 			name = Logos;
@@ -148,6 +182,8 @@
 			children = (
 				883ADAFB15277EFE000F55D5 /* RCPackageDataSource.rb */,
 				883ADAFE1527801B000F55D5 /* RCDatabasePackageDataSource.rb */,
+				883ADB1215294598000F55D5 /* RCLanguagePackageDataSource.rb */,
+				883ADB14152945A3000F55D5 /* RCLibraryPackageDataSource.rb */,
 			);
 			name = "Data sources";
 			sourceTree = "<group>";
@@ -320,7 +356,7 @@
 				883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */,
 				883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */,
 				883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */,
-				883ADAF215276A65000F55D5 /* RCBrewPackageInstaller.rb in Resources */,
+				883ADAF215276A65000F55D5 /* RCBrewManager.rb in Resources */,
 				883ADAF515277558000F55D5 /* PackageManagementWindow.xib in Resources */,
 				883ADAF71527756A000F55D5 /* RCPackageManagementWindowController.rb in Resources */,
 				883ADAF915277B1F000F55D5 /* RCAvailablePackages.rb in Resources */,
@@ -329,6 +365,18 @@
 				883ADB011527858D000F55D5 /* mysql.png in Resources */,
 				883ADB0315278721000F55D5 /* pgsql.png in Resources */,
 				883ADB0515278898000F55D5 /* mongo.png in Resources */,
+				883ADB0B152902BB000F55D5 /* redis.png in Resources */,
+				883ADB0D152906A8000F55D5 /* memcached.png in Resources */,
+				883ADB0F152906AE000F55D5 /* riak.png in Resources */,
+				883ADB11152906B1000F55D5 /* couchdb.png in Resources */,
+				883ADB1315294598000F55D5 /* RCLanguagePackageDataSource.rb in Resources */,
+				883ADB15152945A3000F55D5 /* RCLibraryPackageDataSource.rb in Resources */,
+				883ADB1B15294E67000F55D5 /* erlang.png in Resources */,
+				883ADB1D15294E72000F55D5 /* clojure.png in Resources */,
+				883ADB1F15294EEC000F55D5 /* node.png in Resources */,
+				883ADB2115294F9C000F55D5 /* default.png in Resources */,
+				883ADB23152950B5000F55D5 /* scala.png in Resources */,
+				883ADB25152950C0000F55D5 /* python.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

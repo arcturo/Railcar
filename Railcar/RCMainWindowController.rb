@@ -14,7 +14,7 @@ class RCMainWindowController < NSWindowController
   end
 
   def managePackages(sender)
-    windowController = RCMainWindowController.alloc.initWithWindowNibName("PackageManagementWindow")      
-    windowController.window.makeKeyAndOrderFront(self)
+    @windowController ||= RCPackageManagementWindowController.alloc.initWithWindowNibName("PackageManagementWindow")
+    @windowController.window.makeKeyAndOrderFront(self)
   end
 end

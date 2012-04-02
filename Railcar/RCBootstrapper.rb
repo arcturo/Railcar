@@ -60,7 +60,7 @@ class RCBootstrapper
   
   def installRbenv
     puts("installing rbenv")
-    brewInstaller = RCBrewPackageInstaller.new
+    brewInstaller = RCBrewManager.new
 
     raise "RbEnv install failed!" unless brewInstaller.install("rbenv")
 
