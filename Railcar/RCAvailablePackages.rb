@@ -92,19 +92,9 @@ class RCAvailablePackages
     ],
     "lib" => [
       {
-        :name => "libxml",
-        :description => "Portable XML parsing library",
-        :brewName => "libxml"
-      },
-      {
         :name => "libxslt",
         :description => "Portable XSLT library",
         :brewName => "libxslt"
-      },
-      {
-        :name => "libiconv",
-        :description => "Library for converting among encodings",
-        :brewName => "libiconv"
       },
       {
         :name => "imagemagick",
