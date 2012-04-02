@@ -12,7 +12,6 @@
 		883ADAE815269829000F55D5 /* RCApplicationListDataSource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAE715269829000F55D5 /* RCApplicationListDataSource.rb */; };
 		883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */; };
 		883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEC15269D20000F55D5 /* SettingsWindow.xib */; };
-		883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */; };
 		883ADAF215276A65000F55D5 /* RCBrewManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF115276A65000F55D5 /* RCBrewManager.rb */; };
 		883ADAF515277558000F55D5 /* PackageManagementWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF415277558000F55D5 /* PackageManagementWindow.xib */; };
 		883ADAF71527756A000F55D5 /* RCPackageManagementWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADAF61527756A000F55D5 /* RCPackageManagementWindowController.rb */; };
@@ -34,6 +33,7 @@
 		883ADB2115294F9C000F55D5 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB2015294F9C000F55D5 /* default.png */; };
 		883ADB23152950B5000F55D5 /* scala.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB22152950B5000F55D5 /* scala.png */; };
 		883ADB25152950C0000F55D5 /* python.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB24152950C0000F55D5 /* python.png */; };
+		883ADB27152955A7000F55D5 /* RCRubyManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB26152955A7000F55D5 /* RCRubyManager.rb */; };
 		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
 		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
 		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
@@ -64,7 +64,6 @@
 		883ADAE715269829000F55D5 /* RCApplicationListDataSource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationListDataSource.rb; sourceTree = "<group>"; };
 		883ADAEA15269C99000F55D5 /* RCSettingsWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCSettingsWindowController.rb; sourceTree = "<group>"; };
 		883ADAEC15269D20000F55D5 /* SettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindow.xib; sourceTree = "<group>"; };
-		883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCRubyInstaller.rb; sourceTree = "<group>"; };
 		883ADAF115276A65000F55D5 /* RCBrewManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCBrewManager.rb; sourceTree = "<group>"; };
 		883ADAF415277558000F55D5 /* PackageManagementWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PackageManagementWindow.xib; sourceTree = "<group>"; };
 		883ADAF61527756A000F55D5 /* RCPackageManagementWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCPackageManagementWindowController.rb; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		883ADB2015294F9C000F55D5 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		883ADB22152950B5000F55D5 /* scala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scala.png; sourceTree = "<group>"; };
 		883ADB24152950C0000F55D5 /* python.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = python.png; sourceTree = "<group>"; };
+		883ADB26152955A7000F55D5 /* RCRubyManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCRubyManager.rb; sourceTree = "<group>"; };
 		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,7 +139,7 @@
 		883ADAEE15276A4A000F55D5 /* Installers */ = {
 			isa = PBXGroup;
 			children = (
-				883ADAEF15276A5B000F55D5 /* RCRubyInstaller.rb */,
+				883ADB26152955A7000F55D5 /* RCRubyManager.rb */,
 				883ADAF115276A65000F55D5 /* RCBrewManager.rb */,
 			);
 			name = Installers;
@@ -355,7 +355,6 @@
 				883ADAE815269829000F55D5 /* RCApplicationListDataSource.rb in Resources */,
 				883ADAEB15269C99000F55D5 /* RCSettingsWindowController.rb in Resources */,
 				883ADAED15269D20000F55D5 /* SettingsWindow.xib in Resources */,
-				883ADAF015276A5B000F55D5 /* RCRubyInstaller.rb in Resources */,
 				883ADAF215276A65000F55D5 /* RCBrewManager.rb in Resources */,
 				883ADAF515277558000F55D5 /* PackageManagementWindow.xib in Resources */,
 				883ADAF71527756A000F55D5 /* RCPackageManagementWindowController.rb in Resources */,
@@ -377,6 +376,7 @@
 				883ADB2115294F9C000F55D5 /* default.png in Resources */,
 				883ADB23152950B5000F55D5 /* scala.png in Resources */,
 				883ADB25152950C0000F55D5 /* python.png in Resources */,
+				883ADB27152955A7000F55D5 /* RCRubyManager.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
