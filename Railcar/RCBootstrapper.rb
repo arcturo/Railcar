@@ -70,7 +70,7 @@ class RCBootstrapper
   def installRuby(version = nil)  
     puts("installing ruby")
     
-    rubyInstaller = RCRubyInstaller.new
+    rubyInstaller = RCRubyManager.new
     rubyInstaller.install(version || DEFAULT_RUBY_VERSION) ? delegate.rubyInstalled : raise("Ruby install failed!")
   end
 
