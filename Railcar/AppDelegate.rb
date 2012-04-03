@@ -15,14 +15,22 @@ class AppDelegate
     installer = RCBootstrapper.new
     
     if installer.needsInstall?
-      windowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")
-      installer.delegate = windowController;
-      windowController.installer = installer;
+      @bootstrapWindowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")
+      installer.delegate = bootstrapWindowController;
+      @bootstrapWindowController.installer = installer;
         
-      windowController.window.makeKeyAndOrderFront(self)
+      @bootstrapWindowController.window.makeKeyAndOrderFront(self)
     else
-      windowController = RCMainWindowController.alloc.initWithWindowNibName("MainWindow")      
-      windowController.window.makeKeyAndOrderFront(self)
+      @mainWindowController = RCMainWindowController.alloc.initWithWindowNibName("MainWindow")      
+      @mainWindowController.window.makeKeyAndOrderFront(self)
+    end
+  end
+  
+  def applicationShouldTerminate(sender)
+    if @mainWindowController
+      @mainWindowController.stopAllApplications
+
+      NSTerminateNow
     end
   end
 end

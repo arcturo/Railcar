@@ -40,6 +40,11 @@
 		883ADB33152958FC000F55D5 /* jruby.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB32152958FC000F55D5 /* jruby.png */; };
 		883ADB3515295C5E000F55D5 /* maglev.png in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3415295C5E000F55D5 /* maglev.png */; };
 		883ADB3715295F11000F55D5 /* RCVersionManagementWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */; };
+		883ADB3F152A1635000F55D5 /* RCApplicationLaunchWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3E152A1635000F55D5 /* RCApplicationLaunchWindowController.rb */; };
+		883ADB41152A1642000F55D5 /* ApplicationLaunchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB40152A1642000F55D5 /* ApplicationLaunchWindow.xib */; };
+		884C524F152A865E006B8C90 /* RCApplicationManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 884C524E152A865E006B8C90 /* RCApplicationManager.rb */; };
+		884C5251152A8A14006B8C90 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 884C5250152A8A14006B8C90 /* error.png */; };
+		884C5253152A9BE7006B8C90 /* RCApplicationInstance.rb in Resources */ = {isa = PBXBuildFile; fileRef = 884C5252152A9BE7006B8C90 /* RCApplicationInstance.rb */; };
 		886564861525E17800B63502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886564851525E17800B63502 /* Cocoa.framework */; };
 		886564911525E17800B63502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8865648F1525E17800B63502 /* InfoPlist.strings */; };
 		886564931525E17800B63502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 886564921525E17800B63502 /* main.m */; };
@@ -98,6 +103,11 @@
 		883ADB32152958FC000F55D5 /* jruby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jruby.png; sourceTree = "<group>"; };
 		883ADB3415295C5E000F55D5 /* maglev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maglev.png; sourceTree = "<group>"; };
 		883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCVersionManagementWindowController.rb; sourceTree = "<group>"; };
+		883ADB3E152A1635000F55D5 /* RCApplicationLaunchWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationLaunchWindowController.rb; sourceTree = "<group>"; };
+		883ADB40152A1642000F55D5 /* ApplicationLaunchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationLaunchWindow.xib; sourceTree = "<group>"; };
+		884C524E152A865E006B8C90 /* RCApplicationManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationManager.rb; sourceTree = "<group>"; };
+		884C5250152A8A14006B8C90 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		884C5252152A9BE7006B8C90 /* RCApplicationInstance.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationInstance.rb; sourceTree = "<group>"; };
 		886564811525E17800B63502 /* Railcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Railcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886564851525E17800B63502 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		886564871525E17800B63502 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -148,13 +158,14 @@
 			name = "Settings UI";
 			sourceTree = "<group>";
 		};
-		883ADAEE15276A4A000F55D5 /* Installers */ = {
+		883ADAEE15276A4A000F55D5 /* Installers / Managers */ = {
 			isa = PBXGroup;
 			children = (
 				883ADB26152955A7000F55D5 /* RCRubyManager.rb */,
 				883ADAF115276A65000F55D5 /* RCBrewManager.rb */,
+				884C524E152A865E006B8C90 /* RCApplicationManager.rb */,
 			);
-			name = Installers;
+			name = "Installers / Managers";
 			sourceTree = "<group>";
 		};
 		883ADAF315277544000F55D5 /* Package Management UI */ = {
@@ -221,6 +232,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		883ADB3C152A1610000F55D5 /* Rails App Launch UI */ = {
+			isa = PBXGroup;
+			children = (
+				883ADB3E152A1635000F55D5 /* RCApplicationLaunchWindowController.rb */,
+				883ADB40152A1642000F55D5 /* ApplicationLaunchWindow.xib */,
+				884C5252152A9BE7006B8C90 /* RCApplicationInstance.rb */,
+			);
+			name = "Rails App Launch UI";
+			sourceTree = "<group>";
+		};
 		886564761525E17800B63502 = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +274,10 @@
 		8865648C1525E17800B63502 /* Railcar */ = {
 			isa = PBXGroup;
 			children = (
+				883ADB3C152A1610000F55D5 /* Rails App Launch UI */,
 				883ADB2815295636000F55D5 /* Ruby Manager UI */,
 				883ADAF315277544000F55D5 /* Package Management UI */,
-				883ADAEE15276A4A000F55D5 /* Installers */,
+				883ADAEE15276A4A000F55D5 /* Installers / Managers */,
 				883ADAE915269C88000F55D5 /* Settings UI */,
 				883ADAE215264AD1000F55D5 /* Main UI / Application management */,
 				886564A81525E1C200B63502 /* Bootstrapper */,
@@ -282,6 +304,7 @@
 		886564951525E17800B63502 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				884C5250152A8A14006B8C90 /* error.png */,
 				886564961525E17800B63502 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -417,6 +440,11 @@
 				883ADB33152958FC000F55D5 /* jruby.png in Resources */,
 				883ADB3515295C5E000F55D5 /* maglev.png in Resources */,
 				883ADB3715295F11000F55D5 /* RCVersionManagementWindowController.rb in Resources */,
+				883ADB3F152A1635000F55D5 /* RCApplicationLaunchWindowController.rb in Resources */,
+				883ADB41152A1642000F55D5 /* ApplicationLaunchWindow.xib in Resources */,
+				884C524F152A865E006B8C90 /* RCApplicationManager.rb in Resources */,
+				884C5251152A8A14006B8C90 /* error.png in Resources */,
+				884C5253152A9BE7006B8C90 /* RCApplicationInstance.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

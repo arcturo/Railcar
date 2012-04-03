@@ -63,7 +63,7 @@ class RCRubyManager
   end
 
   def installedVersions
-    @installedVersions ||= Dir.entries(File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions"))
+    @installedVersions ||= Dir.entries(File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions")) - [".", ".."]
   end
 
   def installed?(version)

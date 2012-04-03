@@ -7,10 +7,37 @@
 #
 
 class RCMainWindowController < NSWindowController 
-  attr_accessor :packages_button
+  attr_accessor :packagesButton, :applicationsTable, :dataSource, :appControllers
   
   def windowDidLoad
     super
+  end
+
+  def awakeFromNib
+    applicationsTable.setTarget(self)
+    applicationsTable.setDoubleAction("showLaunchWindow")
+  end
+
+  # TODO: DRY this up.
+  def launchApplication(sender)
+    key, app = dataSource.selectedApplication
+
+    @appControllers ||= {}
+    @appControllers[app] ||= RCApplicationLaunchWindowController.alloc.initWithData(key, app)
+    @appControllers[app].launchApplication
+    @appControllers[app].window.makeKeyAndOrderFront(self)
+  end
+
+  def showLaunchWindow
+    key, app = dataSource.selectedApplication
+
+    @appControllers ||= {}
+    @appControllers[app] ||= RCApplicationLaunchWindowController.alloc.initWithData(key, app)
+    @appControllers[app].window.makeKeyAndOrderFront(self)
+  end
+
+  def stopAllApplications
+    appControllers.values.each {|controller| controller.stopApplication }
   end
 
   def managePackages(sender)
