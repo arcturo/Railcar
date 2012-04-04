@@ -1,48 +1,79 @@
 class RCSetupWindowController < NSWindowController
-  attr_accessor :label, :errorLabel, :consoleButton, :installButton, :progressBar, :installer
+  attr_accessor :label, :errorLabel, :controlButton, :progressBar, :installer
+  attr_accessor :brewTitle, :brewInfo, :rbenvTitle, :rbenvInfo, :rubyTitle, :rubyInfo, :packagesTitle, :packagesInfo
 
   def windowDidLoad
     super
     
-    if installer.needsInstall?
-      consoleButton.setEnabled(false)
-    else
+    if !installer.needsInstall?
       noInstallNeeded
     end
   end
 
+  def windowWillClose(sender)
+    NSApp.stopModal
+  end
+
   def errorOccurred(message)
-    label.setStringValue ""
     errorLabel.setStringValue message
     progressBar.setDoubleValue 0.0
   end
 
   def compilerExists
-    label.setStringValue "Compiler found!  Installing brew..."
+    highlight(brewTitle, brewInfo)
+    brewTitle.setStringValue "Installing Homebrew"
+
     progressBar.incrementBy 10.0
   end
 
   def brewInstalled
-    label.setStringValue "Brew installed!  Installing rbenv..."
+    fade(brewTitle, brewInfo)
+    brewTitle.setStringValue "Homebrew installed"
+
+    highlight(rbenvTitle, rbenvInfo)
+    rbenvTitle.setStringValue "Installing RbEnv"
+
     progressBar.incrementBy 25.0
   end
 
   def rbenvInstalled
-    label.setStringValue "RbEnv installed!  Installing ruby... (This will take a while!)"
+    fade(rbenvTitle, rbenvInfo)
+    rbenvTitle.setStringValue "RbEnv installed"
+
+    highlight(rubyTitle, rubyInfo)
+    rubyTitle.setStringValue "Installing Ruby 1.9.3"
+
     progressBar.incrementBy 15.0
   end
 
   def rubyInstalled
-    label.setStringValue "Ruby installed!  Installing default gems..."
+    fade(rubyTitle, rubyInfo)
+    rubyTitle.setStringValue "Ruby installed"
+
+    highlight(packagesTitle, packagesInfo)
+    packagesTitle.setStringValue "Installing default packages"
+
     progressBar.incrementBy 39.0
   end
 
   def gemsInstalled
-    label.setStringValue "All setup!!"
+    fade(packagesTitle, packagesInfo)
+    packagesTitle.setStringValue "Default packages installed"
+
     progressBar.setDoubleValue 100.0
     progressBar.stopAnimation self
 
-    consoleButton.setEnabled true
+    controlButton.setTitle("Let's go!")
+    controlButton.setEnabled(true)
+    window.makeFirstResponder(controlButton)
+  end
+
+  def controlButtonClick(sender)
+    if installer.needsInstall?
+      installEverything
+    else
+      hideMe
+    end
   end
 
   def noInstallNeeded 
@@ -51,23 +82,27 @@ class RCSetupWindowController < NSWindowController
     progressBar.stopAnimation self
     
     consoleButton.setEnabled true
-    installButton.setEnabled false
+    controlButton.setEnabled false
   end
 
-  def installEverything(sender)
-    installButton.setEnabled false
+  def hideMe
+    NSApp.stopModal
+  end
+
+  def installEverything
+    fade(brewTitle, brewInfo, rbenvTitle, rbenvInfo, rubyTitle, rubyInfo, packagesTitle, packagesInfo)
+
+    controlButton.setEnabled false
     progressBar.performSelectorOnMainThread("startAnimation:", withObject:self, waitUntilDone:false)
 
     installer.performSelectorInBackground("installDependencies", withObject:nil)
   end
 
-  def openConsole(sender)
-    pathToInitializer = File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{DEFAULT_RUBY_VERSION}.sh")
-    
-    command = "tell application \"Terminal\" to do script \"source #{pathToInitializer}\""
-    
-    scriptRunner = NSAppleScript.alloc.initWithSource(command)
-    scriptRunner.executeAndReturnError(nil)
+  def fade(*controls)
+    controls.each {|control| control.setTextColor(NSColor.grayColor)}
   end
 
+  def highlight(*controls)
+    controls.each {|control| control.setTextColor(NSColor.blackColor)}
+  end
 end

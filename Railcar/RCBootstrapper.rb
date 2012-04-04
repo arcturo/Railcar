@@ -10,9 +10,23 @@ class RCBootstrapper
       begin
         checkForCompiler
         
-        installBrew if needsBrew?
-        installRbenv if needsRbEnv?
-        installRuby if needsRuby?
+        if needsBrew?
+          installBrew
+        else
+          delegate.brewInstalled
+        end
+
+        if needsRbEnv?
+          installRbenv 
+        else
+          delegate.rbenvInstalled
+        end
+
+        if needsRuby?
+          installRuby
+        else
+          delegate.rubyInstalled
+        end
 
         installDefaultGems
       rescue StandardError => e

@@ -16,10 +16,18 @@ class AppDelegate
     
     if installer.needsInstall?
       @bootstrapWindowController = RCSetupWindowController.alloc.initWithWindowNibName("SetupWindow")
-      installer.delegate = bootstrapWindowController;
-      @bootstrapWindowController.installer = installer;
-        
-      @bootstrapWindowController.window.makeKeyAndOrderFront(self)
+      installer.delegate = @bootstrapWindowController
+      @bootstrapWindowController.installer = installer
+       
+      bootstrapWindow = @bootstrapWindowController.window
+      NSApp.runModalForWindow(bootstrapWindow)
+      NSApp.endSheet(bootstrapWindow)
+      bootstrapWindow.orderOut(self)
+    end
+
+    # Did they somehow get around it?
+    if installer.needsInstall?
+      exit
     else
       @mainWindowController = RCMainWindowController.alloc.initWithWindowNibName("MainWindow")      
       @mainWindowController.window.makeKeyAndOrderFront(self)
