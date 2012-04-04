@@ -385,7 +385,7 @@
 								</object>
 								<string key="NSCellIdentifier">_NS:2419</string>
 								<reference key="NSControlView" ref="643172334"/>
-								<int key="NSButtonFlags">-1232846593</int>
+								<int key="NSButtonFlags">-2038152961</int>
 								<int key="NSButtonFlags2">173</int>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
@@ -409,7 +409,7 @@
 								<reference key="NSSupport" ref="29"/>
 								<string key="NSCellIdentifier">_NS:2419</string>
 								<reference key="NSControlView" ref="900618762"/>
-								<int key="NSButtonFlags">-1229700865</int>
+								<int key="NSButtonFlags">-2035007233</int>
 								<int key="NSButtonFlags2">173</int>
 								<string key="NSAlternateContents"/>
 								<string key="NSKeyEquivalent"/>
@@ -489,6 +489,14 @@
 						<reference key="destination" ref="701728743"/>
 					</object>
 					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">generateApplication:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="643172334"/>
+					</object>
+					<int key="connectionID">65</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -823,7 +831,7 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">64</int>
+			<int key="maxID">65</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -875,12 +883,14 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>generateApplication:</string>
 							<string>launchApplication:</string>
 							<string>managePackages:</string>
 							<string>manageVersions:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -890,12 +900,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>generateApplication:</string>
 							<string>launchApplication:</string>
 							<string>managePackages:</string>
 							<string>manageVersions:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">generateApplication:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBActionInfo">
 								<string key="name">launchApplication:</string>
 								<string key="candidateClassName">id</string>
@@ -914,12 +929,14 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>appControllers</string>
 							<string>applicationsTable</string>
 							<string>dataSource</string>
 							<string>packagesButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -929,12 +946,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>appControllers</string>
 							<string>applicationsTable</string>
 							<string>dataSource</string>
 							<string>packagesButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">appControllers</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">applicationsTable</string>
 								<string key="candidateClassName">id</string>

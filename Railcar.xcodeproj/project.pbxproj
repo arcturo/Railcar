@@ -57,6 +57,9 @@
 		886564B21525EB7400B63502 /* Configuration.rb in Resources */ = {isa = PBXBuildFile; fileRef = 886564B11525EB7400B63502 /* Configuration.rb */; };
 		886564B41525EE6500B63502 /* SetupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886564B31525EE6500B63502 /* SetupWindow.xib */; };
 		886564B81525F17000B63502 /* install_brew.sh in Resources */ = {isa = PBXBuildFile; fileRef = 886564B71525F17000B63502 /* install_brew.sh */; };
+		889842D0152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 889842CF152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb */; };
+		889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */; };
+		889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,9 @@
 		886564B11525EB7400B63502 /* Configuration.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Configuration.rb; sourceTree = "<group>"; };
 		886564B31525EE6500B63502 /* SetupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupWindow.xib; sourceTree = "<group>"; };
 		886564B71525F17000B63502 /* install_brew.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_brew.sh; sourceTree = "<group>"; };
+		889842CF152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationGeneratorWindowController.rb; sourceTree = "<group>"; };
+		889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationGeneratorWindow.xib; sourceTree = "<group>"; };
+		889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationGenerator.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +280,7 @@
 		8865648C1525E17800B63502 /* Railcar */ = {
 			isa = PBXGroup;
 			children = (
+				889842CD152C758200D9B797 /* App Generator UI */,
 				883ADB3C152A1610000F55D5 /* Rails App Launch UI */,
 				883ADB2815295636000F55D5 /* Ruby Manager UI */,
 				883ADAF315277544000F55D5 /* Package Management UI */,
@@ -327,6 +334,16 @@
 				886564B71525F17000B63502 /* install_brew.sh */,
 			);
 			name = Bootstrapper;
+			sourceTree = "<group>";
+		};
+		889842CD152C758200D9B797 /* App Generator UI */ = {
+			isa = PBXGroup;
+			children = (
+				889842CF152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb */,
+				889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */,
+				889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */,
+			);
+			name = "App Generator UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +462,9 @@
 				884C524F152A865E006B8C90 /* RCApplicationManager.rb in Resources */,
 				884C5251152A8A14006B8C90 /* error.png in Resources */,
 				884C5253152A9BE7006B8C90 /* RCApplicationInstance.rb in Resources */,
+				889842D0152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb in Resources */,
+				889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */,
+				889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

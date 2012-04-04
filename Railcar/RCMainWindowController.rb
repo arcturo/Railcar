@@ -37,7 +37,9 @@ class RCMainWindowController < NSWindowController
   end
 
   def stopAllApplications
-    appControllers.values.each {|controller| controller.stopApplication }
+    if appControllers && !appControllers.empty?
+      appControllers.values.each {|controller| controller.stopApplication }
+    end
   end
 
   def managePackages(sender)
@@ -49,4 +51,9 @@ class RCMainWindowController < NSWindowController
     @versionsWindowController ||= RCVersionManagementWindowController.alloc.initWithWindowNibName("RubyManagementWindow")
     @versionsWindowController.window.makeKeyAndOrderFront(self)
   end
+
+  def generateApplication(sender)
+    controller = RCApplicationGeneratorWindowController.alloc.initWithWindowNibName("ApplicationGeneratorWindow")
+    controller.window.makeKeyAndOrderFront(self)
+  end    
 end
