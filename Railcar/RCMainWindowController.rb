@@ -18,6 +18,10 @@ class RCMainWindowController < NSWindowController
     applicationsTable.setDoubleAction("showLaunchWindow")
   end
 
+  def windowDidBecomeKey(notification)
+    dataSource.updateApplicationList
+  end
+
   # TODO: DRY this up.
   def launchApplication(sender)
     key, app = dataSource.selectedApplication

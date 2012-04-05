@@ -9,7 +9,7 @@
 class RCApplicationGeneratorWindowController < NSWindowController
   attr_accessor :versionSelector, :portField, :pathField, :nameField, :databaseSelector, :versionControlSelector
   attr_accessor :testingSelector, :gitFileCheckbox, :initializeCheckbox, :generateButton, :skipActiveRecordCheckbox
-  attr_accessor :skipAssetPipelineCheckbox, :skipBundlerCheckbox
+  attr_accessor :skipAssetPipelineCheckbox, :skipBundlerCheckbox, :launchCheckbox, :spinner
 
   def windowDidLoad
     super
@@ -82,16 +82,40 @@ class RCApplicationGeneratorWindowController < NSWindowController
     generator = RCApplicationGenerator.new(self)
     generator.delegate = self
     
+    toggleControlsEnabled(false)
+    generateButton.setTitle("Generating")
+    spinner.startAnimation(self)
+
     Thread.new do
       generator.generate
     end
   end
 
-  def generationComplete
-    puts "yes!!"
+  def toggleControlsEnabled(value)
+    [versionSelector, portField, pathField, nameField, databaseSelector, versionControlSelector,
+     testingSelector, gitFileCheckbox, initializeCheckbox, generateButton, skipActiveRecordCheckbox,
+     skipAssetPipelineCheckbox, skipBundlerCheckbox, launchCheckbox].each {|control| control.setEnabled(value)}
+  end
+
+  def generationComplete(path)
+    spinner.stopAnimation(self)
+    manager = RCApplicationManager.alloc.init
+
+    manager.add(path, {
+      :rubyVersion => versionSelector.selectedItem.title,
+      :port => portField.stringValue
+    })
+
+    window.close
   end
 
   def generationError
-    puts "poo"
+    spinner.stopAnimation(self)
+    generateButton.setTitle("Generate")
+    toggleControlsEnabled(true)
+  
+    alert = NSAlert.alertWithMessageText("Generator error!", defaultButton: "OK", alternateButton: nil, otherButton: nil, informativeTextWithFormat: "Looks like there was an error when generating your application.  Make sure the path you provided is valid!")
+    alert.setIcon(NSImage.imageNamed("error.png"))
+    alert.beginSheetModalForWindow(window, modalDelegate: self, didEndSelector: nil, contextInfo: nil)
   end
 end

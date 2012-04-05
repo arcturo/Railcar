@@ -8,8 +8,6 @@
 
 class RCApplicationManager
   def applications
-    require 'pp'
-
     NSUserDefaults.standardUserDefaults['railcar.linkedApplications'] ||= {}
     NSUserDefaults.standardUserDefaults['railcar.linkedApplications']
   end
@@ -24,7 +22,7 @@ class RCApplicationManager
     "#{Time.now.to_i}-#{data[:name].gsub(/\W/, '')}-#{data[:path].gsub(/\W/, '')}"
   end
 
-  def add(path)
+  def add(path, data = {})
     if isRailsApp?(path)
       addApplicationToList({
         :name => discernAppName(path), 
@@ -32,7 +30,7 @@ class RCApplicationManager
         :rubyVersion => DEFAULT_RUBY_VERSION,
         :environment => "development",
         :port => (NSUserDefaults.standardUserDefaults['railcar.linkedApplications'].length + 3001).to_s
-      })
+      }.merge(data))
 
       true
     else

@@ -35,7 +35,7 @@ class RCApplicationGenerator
     processId = Process.spawn(command)
     Process.waitpid(processId)
 
-    File.exist?(completePath) ? delegate.generationComplete : delegate.generationError
+    File.exist?(completePath) ? delegate.generationComplete(completePath) : delegate.generationError
   end
 
   def generateFlags
