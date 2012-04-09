@@ -1,5 +1,5 @@
-require 'RCBrewPackageInstaller'
-require 'RCRubyInstaller'
+require 'RCBrewManager'
+require 'RCRubyManager'
 
 class RCBootstrapper
   attr_accessor :delegate
