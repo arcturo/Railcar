@@ -1,6 +1,6 @@
 # Railcar
 
-Railcar is a fully isolate Rails development environment.  The application itself is developed in MacRuby using XCode and Interface Builder.  On first run, it will bootstrap itself with:
+Railcar is a fully isolated Rails development environment.  The application itself is developed in MacRuby using XCode and Interface Builder.  On first run, it will bootstrap itself with:
 
 * An isolated, Railcar-owned installation of Homebrew
 * RbEnv through Homebrew
@@ -8,12 +8,12 @@ Railcar is a fully isolate Rails development environment.  The application itsel
 * Sqlite through Homebrew
 * Rails 3.2 (or whatever the latest release currently is)
 
-These installations are isolated from your system installs, so if you're already using Homebrew, RVM, RbEnv, etc. then it won't mess with anything.
+These installations are isolated from your system installs, so if you're already using Homebrew, RVM, RbEnv, etc. then it won't mess with anything.  When you're done with Railcar, just toss the app bundle and all this stuff goes with it.
 
 ## Requirements
 
 * Mac OS X 10.6+
-* A C compiler (currently; we are working on changing that).  Acceptable options:
+* A C compiler (currently; we are working on changing that).  Preferred options:
   * XCode
   * Apple's command line tools downloadable from the Developer Center (GCC without XCode basically)
   * GCC installer package from here: [https://github.com/kennethreitz/osx-gcc-installer](https://github.com/kennethreitz/osx-gcc-installer)
