@@ -13,6 +13,7 @@ These installations are isolated from your system installs, so if you're already
 ## Requirements
 
 * Mac OS X 10.6+
+* The latest version of MacRuby (currently 0.11)
 * A C compiler (currently; we are working on changing that).  Preferred options:
   * XCode
   * Apple's command line tools downloadable from the Developer Center (GCC without XCode basically)
