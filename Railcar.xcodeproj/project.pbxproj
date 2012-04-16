@@ -61,6 +61,9 @@
 		889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */; };
 		889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */; };
 		889C4E38153BDB0800E69C0C /* railcar-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 889C4E37153BDB0800E69C0C /* railcar-icon-512.png */; };
+		889C4E3B153BDCF900E69C0C /* servicesTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 889C4E3A153BDCF900E69C0C /* servicesTemplate.png */; };
+		889C4E3D153BDCFF00E69C0C /* rubyTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 889C4E3C153BDCFF00E69C0C /* rubyTemplate.png */; };
+		889C4E3F153BDD0300E69C0C /* packageTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 889C4E3E153BDD0300E69C0C /* packageTemplate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,9 @@
 		889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationGeneratorWindow.xib; sourceTree = "<group>"; };
 		889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationGenerator.rb; sourceTree = "<group>"; };
 		889C4E37153BDB0800E69C0C /* railcar-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "railcar-icon-512.png"; path = "../railcar-icon-512.png"; sourceTree = "<group>"; };
+		889C4E3A153BDCF900E69C0C /* servicesTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicesTemplate.png; sourceTree = "<group>"; };
+		889C4E3C153BDCFF00E69C0C /* rubyTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rubyTemplate.png; sourceTree = "<group>"; };
+		889C4E3E153BDD0300E69C0C /* packageTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = packageTemplate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 		883ADAE215264AD1000F55D5 /* Main UI / Application management */ = {
 			isa = PBXGroup;
 			children = (
+				889C4E39153BDBC700E69C0C /* Icons */,
 				883ADAE315264AF6000F55D5 /* RCMainWindowController.rb */,
 				883ADAE515264B90000F55D5 /* MainWindow.xib */,
 				883ADAE715269829000F55D5 /* RCApplicationListDataSource.rb */,
@@ -349,6 +356,16 @@
 			name = "App Generator UI";
 			sourceTree = "<group>";
 		};
+		889C4E39153BDBC700E69C0C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				889C4E3E153BDD0300E69C0C /* packageTemplate.png */,
+				889C4E3C153BDCFF00E69C0C /* rubyTemplate.png */,
+				889C4E3A153BDCF900E69C0C /* servicesTemplate.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -469,6 +486,9 @@
 				889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */,
 				889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */,
 				889C4E38153BDB0800E69C0C /* railcar-icon-512.png in Resources */,
+				889C4E3B153BDCF900E69C0C /* servicesTemplate.png in Resources */,
+				889C4E3D153BDCFF00E69C0C /* rubyTemplate.png in Resources */,
+				889C4E3F153BDD0300E69C0C /* packageTemplate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
