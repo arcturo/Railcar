@@ -60,6 +60,7 @@
 		889842D0152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 889842CF152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb */; };
 		889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */; };
 		889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */; };
+		889C4E38153BDB0800E69C0C /* railcar-icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 889C4E37153BDB0800E69C0C /* railcar-icon-512.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		889842CF152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationGeneratorWindowController.rb; sourceTree = "<group>"; };
 		889842D1152C75C700D9B797 /* ApplicationGeneratorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationGeneratorWindow.xib; sourceTree = "<group>"; };
 		889842D3152CE8DB00D9B797 /* RCApplicationGenerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationGenerator.rb; sourceTree = "<group>"; };
+		889C4E37153BDB0800E69C0C /* railcar-icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "railcar-icon-512.png"; path = "../railcar-icon-512.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		886564951525E17800B63502 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				889C4E37153BDB0800E69C0C /* railcar-icon-512.png */,
 				884C5250152A8A14006B8C90 /* error.png */,
 				886564961525E17800B63502 /* MainMenu.xib */,
 			);
@@ -389,7 +392,7 @@
 		886564781525E17800B63502 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Arcturo;
 			};
 			buildConfigurationList = 8865647B1525E17800B63502 /* Build configuration list for PBXProject "Railcar" */;
@@ -465,6 +468,7 @@
 				889842D0152C75A000D9B797 /* RCApplicationGeneratorWindowController.rb in Resources */,
 				889842D2152C75C700D9B797 /* ApplicationGeneratorWindow.xib in Resources */,
 				889842D4152CE8DB00D9B797 /* RCApplicationGenerator.rb in Resources */,
+				889C4E38153BDB0800E69C0C /* railcar-icon-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
@@ -578,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = x86_64;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",

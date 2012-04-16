@@ -10,7 +10,7 @@ framework 'Cocoa'
 
 class AppDelegate
   attr_accessor :window
-  
+    
   def applicationDidFinishLaunching(a_notification)
     installer = RCBootstrapper.new
     
