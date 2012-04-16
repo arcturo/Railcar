@@ -6,6 +6,8 @@
 #  Copyright 2012 Arcturo. All rights reserved.
 #
 
+require 'fileutils'
+
 class RCRubyManager
   attr_accessor :delegate
 
@@ -18,7 +20,11 @@ class RCRubyManager
   end
 
   def versionPath(version = nil)
-    File.join(NSBundle.mainBundle.bundlePath, "rbenv", "versions", (version || DEFAULT_RUBY_VERSION))
+    File.join(versionsPath, (version || DEFAULT_RUBY_VERSION))
+  end
+  
+  def versionsPath
+    File.join(rbenvRoot, "versions")
   end
 
   def rbenvRoot
@@ -28,8 +34,34 @@ class RCRubyManager
   def brewPath
     File.join(NSBundle.mainBundle.bundlePath, "homebrew", "bin")
   end
+  
+  def install(version = nil, fromSource = true)
+    fromSource ? installFromSource : installBinary
+  end
+  
+  def installBinary(version = nil)
+    FileUtils.mkdir_p(versionsPath)
+    
+    Dir.chdir(versionsPath) do
+      `curl -o rubyBin.zip http://railcar.info/data/rubies/#{version || DEFAULT_RUBY_VERSION}.zip`
+      downloadSucceeded = ($?.exitstatus == 0)
+      
+      `unzip rubyBin.zip`
+      unzipSucceeded = ($?.exitstatus == 0)
+      
+      if downloadSucceeded && unzipSucceeded
+        writeShellInitializer(version)
+        delegate.newVersionInstalled(version || DEFAULT_RUBY_VERSION) if delegate
+        
+        `rm rubyBin.zip`
+      else
+        delegate.rubyInstallError if delegate
+        return false
+      end
+    end
+  end
 
-  def install(version = nil)
+  def installFromSource(version = nil)
     `CC='/usr/bin/gcc' #{buildPath} #{version || DEFAULT_RUBY_VERSION} #{versionPath(version)}`
     
     if ($?.exitstatus == 0)

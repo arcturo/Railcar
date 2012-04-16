@@ -4,11 +4,13 @@ require 'RCRubyManager'
 class RCBootstrapper
   attr_accessor :delegate
   
-  def installDependencies
+  def installDependencies(fromSource = true)
+    @fromSource = fromSource 
+    
     puts("starting")
     if needsInstall?
       begin
-        checkForCompiler
+        checkForCompiler if buildFromSource?
         
         if needsBrew?
           installBrew
@@ -84,7 +86,7 @@ class RCBootstrapper
     puts("installing ruby")
     
     rubyInstaller = RCRubyManager.new
-    rubyInstaller.install(version || DEFAULT_RUBY_VERSION) ? delegate.rubyInstalled : raise("Ruby install failed!")
+    rubyInstaller.install((version || DEFAULT_RUBY_VERSION), buildFromSource?) ? delegate.rubyInstalled : raise("Ruby install failed!")
   end
 
   def installDefaultGems(version = nil)
@@ -98,5 +100,9 @@ class RCBootstrapper
 
   def needsInstall?
     Dir.glob(File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_*.sh")).empty?
+  end
+  
+  def buildFromSource?
+    @fromSource
   end
 end

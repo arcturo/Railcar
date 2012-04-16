@@ -1,6 +1,5 @@
 class RCSetupWindowController < NSWindowController
-  attr_accessor :label, :errorLabel, :controlButton, :progressBar, :installer
-  attr_accessor :brewTitle, :brewInfo, :rbenvTitle, :rbenvInfo, :rubyTitle, :rubyInfo, :packagesTitle, :packagesInfo
+  attr_accessor :label, :errorLabel, :controlButton, :progressBar, :installer, :sourceCheckbox, :brewTitle, :brewInfo, :rbenvTitle, :rbenvInfo, :rubyTitle, :rubyInfo, :packagesTitle, :packagesInfo
 
   def windowDidLoad
     super
@@ -81,7 +80,6 @@ class RCSetupWindowController < NSWindowController
     progressBar.setDoubleValue 100.0
     progressBar.stopAnimation self
     
-    consoleButton.setEnabled true
     controlButton.setEnabled false
   end
 
@@ -93,9 +91,10 @@ class RCSetupWindowController < NSWindowController
     fade(brewTitle, brewInfo, rbenvTitle, rbenvInfo, rubyTitle, rubyInfo, packagesTitle, packagesInfo)
 
     controlButton.setEnabled false
+    sourceCheckbox.setEnabled false
     progressBar.performSelectorOnMainThread("startAnimation:", withObject:self, waitUntilDone:false)
 
-    installer.performSelectorInBackground("installDependencies", withObject:nil)
+    installer.performSelectorInBackground("installDependencies", withObject:(sourceCheckbox.state == 1))
   end
 
   def fade(*controls)

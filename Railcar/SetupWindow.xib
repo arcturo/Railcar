@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1070</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
-		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<string key="IBDocument.SystemVersion">11D50d</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.AppKitVersion">1138.32</string>
+		<string key="IBDocument.HIToolboxVersion">568.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">1938</string>
+			<string key="NS.object.0">2182</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -341,7 +341,7 @@
 											<string key="NSFrame">{{41, 139}, {447, 19}}</string>
 											<reference key="NSSuperview" ref="448977682"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="436933220"/>
+											<reference key="NSNextKeyView" ref="947935554"/>
 											<string key="NSReuseIdentifierKey">_NS:360</string>
 											<string key="NSAntiCompressionPriority">{250, 750}</string>
 											<bool key="NSEnabled">YES</bool>
@@ -369,7 +369,7 @@
 											<object class="NSTextFieldCell" key="NSCell" id="965187183">
 												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">272760832</int>
-												<string key="NSContents">Matz's Ruby Interpreter (MRI) is the de facto standard Ruby interpreter and reference implementation for all other Ruby implementations.  We'll be installing the latest stable version (1.9.3) for you.</string>
+												<string key="NSContents">Matz's Ruby Interpreter (MRI) is the de facto standard Ruby interpreter and reference implementation for all other Ruby implementations.  We'll install the latest stable version (1.9.3).</string>
 												<reference key="NSSupport" ref="26"/>
 												<string key="NSCellIdentifier">_NS:360</string>
 												<reference key="NSControlView" ref="436933220"/>
@@ -438,6 +438,41 @@
 												<reference key="NSControlView" ref="269281479"/>
 												<reference key="NSBackgroundColor" ref="518798985"/>
 												<reference key="NSTextColor" ref="563814632"/>
+											</object>
+										</object>
+										<object class="NSButton" id="947935554">
+											<reference key="NSNextResponder" ref="448977682"/>
+											<int key="NSvFlags">268</int>
+											<string key="NSFrame">{{40, 72}, {193, 18}}</string>
+											<reference key="NSSuperview" ref="448977682"/>
+											<reference key="NSWindow"/>
+											<reference key="NSNextKeyView" ref="436933220"/>
+											<string key="NSReuseIdentifierKey">_NS:9</string>
+											<bool key="NSEnabled">YES</bool>
+											<object class="NSButtonCell" key="NSCell" id="823040484">
+												<int key="NSCellFlags">67239424</int>
+												<int key="NSCellFlags2">262144</int>
+												<string key="NSContents">Install from source (not recommended)</string>
+												<object class="NSFont" key="NSSupport">
+													<string key="NSName">LucidaGrande</string>
+													<double key="NSSize">9</double>
+													<int key="NSfFlags">3614</int>
+												</object>
+												<string key="NSCellIdentifier">_NS:9</string>
+												<reference key="NSControlView" ref="947935554"/>
+												<int key="NSButtonFlags">1211912703</int>
+												<int key="NSButtonFlags2">2</int>
+												<object class="NSCustomResource" key="NSNormalImage">
+													<string key="NSClassName">NSImage</string>
+													<string key="NSResourceName">NSSwitch</string>
+												</object>
+												<object class="NSButtonImageSource" key="NSAlternateImage">
+													<string key="NSImageName">NSSwitch</string>
+												</object>
+												<string key="NSAlternateContents"/>
+												<string key="NSKeyEquivalent"/>
+												<int key="NSPeriodicDelay">200</int>
+												<int key="NSPeriodicInterval">25</int>
 											</object>
 										</object>
 									</object>
@@ -656,6 +691,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">sourceCheckbox</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="947935554"/>
+					</object>
+					<int key="connectionID">71</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="1005"/>
 						<reference key="destination" ref="1001"/>
@@ -765,6 +808,7 @@
 							<reference ref="269281479"/>
 							<reference ref="742978507"/>
 							<reference ref="141009799"/>
+							<reference ref="947935554"/>
 						</object>
 						<reference key="parent" ref="1006"/>
 					</object>
@@ -958,6 +1002,20 @@
 						<reference key="object" ref="123593791"/>
 						<reference key="parent" ref="742978507"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">69</int>
+						<reference key="object" ref="947935554"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="823040484"/>
+						</object>
+						<reference key="parent" ref="687369925"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">70</int>
+						<reference key="object" ref="823040484"/>
+						<reference key="parent" ref="947935554"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1004,10 +1062,12 @@
 					<string>55.IBPluginDependency</string>
 					<string>56.IBPluginDependency</string>
 					<string>57.IBPluginDependency</string>
+					<string>69.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
+					<string>70.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
 				</object>
-				<object class="NSMutableArray" key="dict.values">
+				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1017,6 +1077,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{357, 418}, {480, 270}}</string>
 					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1065,7 +1127,7 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">68</int>
+			<int key="maxID">71</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1080,7 +1142,7 @@
 							<string>controlButtonClick:</string>
 							<string>windowWillClose:</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>id</string>
 							<string>id</string>
@@ -1093,7 +1155,7 @@
 							<string>controlButtonClick:</string>
 							<string>windowWillClose:</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">controlButtonClick:</string>
@@ -1122,9 +1184,11 @@
 							<string>rbenvTitle</string>
 							<string>rubyInfo</string>
 							<string>rubyTitle</string>
+							<string>sourceCheckbox</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1157,8 +1221,9 @@
 							<string>rbenvTitle</string>
 							<string>rubyInfo</string>
 							<string>rubyTitle</string>
+							<string>sourceCheckbox</string>
 						</object>
-						<object class="NSMutableArray" key="dict.values">
+						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">brewInfo</string>
@@ -1212,6 +1277,10 @@
 								<string key="name">rubyTitle</string>
 								<string key="candidateClassName">id</string>
 							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">sourceCheckbox</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -1229,5 +1298,9 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">NSSwitch</string>
+			<string key="NS.object.0">{15, 15}</string>
+		</object>
 	</data>
 </archive>
