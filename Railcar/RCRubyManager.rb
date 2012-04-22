@@ -79,14 +79,22 @@ class RCRubyManager
     export PATH=#{rbenvPath}:#{brewPath}:$PATH
     eval \"$(rbenv init -)\"
     export RBENV_VERSION=\"#{version || DEFAULT_RUBY_VERSION}\"
-    cd ~
-    clear
-    echo 'Railcar Shell -- Setup for #{version || DEFAULT_RUBY_VERSION}'"
     
-    Dir.mkdir(File.join(NSBundle.mainBundle.bundlePath, "initializers")) rescue nil # don't care if it exists already
-    File.open(File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh"), "w") do |f|
+    # If we're running inside Railcar.app...
+    if [ -z \"$RAILCAR_PATH\" ]; then
+      cd ~
+      clear
+      echo 'Railcar Shell -- Setup for #{version || DEFAULT_RUBY_VERSION}'
+    fi"
+    
+    Dir.mkdir(initializersPath) rescue nil # don't care if it exists already
+    File.open(File.join(initializersPath, "rbenv_init_#{version || DEFAULT_RUBY_VERSION}.sh"), "w") do |f|
       f.write(configuration)
     end
+  end
+
+  def initializersPath
+    File.join((ENV['RAILCAR_PATH'] || NSBundle.mainBundle.bundlePath), "initializers")
   end
 
   def refreshInstalledVersions

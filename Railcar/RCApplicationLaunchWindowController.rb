@@ -51,23 +51,14 @@ class RCApplicationLaunchWindowController < NSWindowController
     controlButton.setEnabled(false)
     
     @app.stop
-
-    appLink.setHidden(true)
-    appLinkLabel.setHidden(true)
-
-    controlButton.setTitle("Launch")
-    controlButton.setEnabled(true)
+    refreshControl
   end
 
   def launchApplication
     controlButton.setEnabled(false)
 
     if @app.launch
-      appLink.setStringValue("http://localhost:#{@app.port}/")
-      appLink.setHidden(false)
-      appLinkLabel.setHidden(false)
-
-      controlButton.setTitle("Stop")
+      refreshControl
     else
       appLink.setHidden(true)
       appLinkLabel.setHidden(true)
@@ -99,5 +90,28 @@ class RCApplicationLaunchWindowController < NSWindowController
     
     versionControlLabel.setStringValue(info[:name])
     versionControlStatusLabel.setStringValue(info[:status])
+  end
+
+  def refreshControl
+    if @app.launched?
+      appLink.setStringValue("http://localhost:#{@app.port}/")
+      appLink.setHidden(false)
+      appLinkLabel.setHidden(false)
+
+      controlButton.setTitle("Stop")
+    else
+      appLink.setHidden(true)
+      appLinkLabel.setHidden(true)
+
+      controlButton.setTitle("Launch")
+      controlButton.setEnabled(true)
+    end
+  end
+
+  def windowDidBecomeKey(notification)
+    refreshVersionControl
+    refreshEnvironments
+    refreshVersions
+    refreshControl
   end
 end

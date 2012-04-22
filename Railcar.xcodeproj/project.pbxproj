@@ -42,7 +42,9 @@
 		883ADB3715295F11000F55D5 /* RCVersionManagementWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3615295F11000F55D5 /* RCVersionManagementWindowController.rb */; };
 		883ADB3F152A1635000F55D5 /* RCApplicationLaunchWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB3E152A1635000F55D5 /* RCApplicationLaunchWindowController.rb */; };
 		883ADB41152A1642000F55D5 /* ApplicationLaunchWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ADB40152A1642000F55D5 /* ApplicationLaunchWindow.xib */; };
-		88436FE5153FC9CC0069C4E0 /* 512-Railcar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88436FE4153FC9CC0069C4E0 /* 512-Railcar.png */; };
+		88436FE9154058FE0069C4E0 /* RCCli.rb in Resources */ = {isa = PBXBuildFile; fileRef = 88436FE8154058FE0069C4E0 /* RCCli.rb */; };
+		88436FEA15426C0B0069C4E0 /* 512-Railcar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88436FE4153FC9CC0069C4E0 /* 512-Railcar.png */; };
+		88436FEC154270210069C4E0 /* cli.sh in Resources */ = {isa = PBXBuildFile; fileRef = 88436FEB154270210069C4E0 /* cli.sh */; };
 		884C524F152A865E006B8C90 /* RCApplicationManager.rb in Resources */ = {isa = PBXBuildFile; fileRef = 884C524E152A865E006B8C90 /* RCApplicationManager.rb */; };
 		884C5251152A8A14006B8C90 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 884C5250152A8A14006B8C90 /* error.png */; };
 		884C5253152A9BE7006B8C90 /* RCApplicationInstance.rb in Resources */ = {isa = PBXBuildFile; fileRef = 884C5252152A9BE7006B8C90 /* RCApplicationInstance.rb */; };
@@ -114,6 +116,8 @@
 		883ADB3E152A1635000F55D5 /* RCApplicationLaunchWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationLaunchWindowController.rb; sourceTree = "<group>"; };
 		883ADB40152A1642000F55D5 /* ApplicationLaunchWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplicationLaunchWindow.xib; sourceTree = "<group>"; };
 		88436FE4153FC9CC0069C4E0 /* 512-Railcar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "512-Railcar.png"; sourceTree = "<group>"; };
+		88436FE8154058FE0069C4E0 /* RCCli.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCCli.rb; sourceTree = "<group>"; };
+		88436FEB154270210069C4E0 /* cli.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = cli.sh; sourceTree = "<group>"; };
 		884C524E152A865E006B8C90 /* RCApplicationManager.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationManager.rb; sourceTree = "<group>"; };
 		884C5250152A8A14006B8C90 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		884C5252152A9BE7006B8C90 /* RCApplicationInstance.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = RCApplicationInstance.rb; sourceTree = "<group>"; };
@@ -259,6 +263,15 @@
 			name = "Rails App Launch UI";
 			sourceTree = "<group>";
 		};
+		88436FE7154058E40069C4E0 /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				88436FEB154270210069C4E0 /* cli.sh */,
+				88436FE8154058FE0069C4E0 /* RCCli.rb */,
+			);
+			name = CLI;
+			sourceTree = "<group>";
+		};
 		886564761525E17800B63502 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +305,7 @@
 		8865648C1525E17800B63502 /* Railcar */ = {
 			isa = PBXGroup;
 			children = (
+				88436FE7154058E40069C4E0 /* CLI */,
 				889842CD152C758200D9B797 /* App Generator UI */,
 				883ADB3C152A1610000F55D5 /* Rails App Launch UI */,
 				883ADB2815295636000F55D5 /* Ruby Manager UI */,
@@ -492,7 +506,9 @@
 				889C4E3B153BDCF900E69C0C /* servicesTemplate.png in Resources */,
 				889C4E3D153BDCFF00E69C0C /* rubyTemplate.png in Resources */,
 				889C4E3F153BDD0300E69C0C /* packageTemplate.png in Resources */,
-				88436FE5153FC9CC0069C4E0 /* 512-Railcar.png in Resources */,
+				88436FE9154058FE0069C4E0 /* RCCli.rb in Resources */,
+				88436FEA15426C0B0069C4E0 /* 512-Railcar.png in Resources */,
+				88436FEC154270210069C4E0 /* cli.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

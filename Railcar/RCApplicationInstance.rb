@@ -6,6 +6,7 @@
 #  Copyright 2012 Arcturo. All rights reserved.
 #
 require 'yaml'
+require 'fileutils'
 
 class RCApplicationInstance
   attr_accessor :name, :path, :rubyVersion, :port, :environment, :key, :processId
@@ -20,14 +21,22 @@ class RCApplicationInstance
     @environment = data[:environment]
   end
 
+  # CLI will feed environment variable if it's available
   def initializerPath
-    File.join(NSBundle.mainBundle.bundlePath, "initializers", "rbenv_init_#{rubyVersion}.sh")
+    File.join((ENV['RAILCAR_PATH'] || NSBundle.mainBundle.bundlePath), "initializers", "rbenv_init_#{rubyVersion}.sh")
   end
 
   def launch
     begin 
-      @processId = Process.spawn("source #{initializerPath} \n ruby #{path}/script/rails server -e #{environment} -p #{port}")
-    
+      bundleProcessId = Process.spawn("source #{initializerPath}\n bundle install --gemfile=#{path}/Gemfile > /dev/null 2>&1")
+      Process.waitpid(bundleProcessId)
+
+      @processId = Process.spawn("source #{initializerPath}\n ruby #{path}/script/rails server -e #{environment} -p #{port}")
+
+      File.open(File.join(path, "tmp", "railcar.pid"), "w") do |f|
+        f.write(@processId.to_s)
+      end
+      
       @launched = true
     rescue
       @launched = false
@@ -35,11 +44,12 @@ class RCApplicationInstance
   end
 
   def stop
-    if @processId
+    if (theProcessId = (@processId || File.read(File.join(path, "tmp", "railcar.pid"))))
       begin
-        Process.kill("KILL", @processId)
-        @processId = nil
-        
+        Process.kill("KILL", theProcessId.to_i)
+        theProcessId = nil
+        FileUtils.rm(File.join(path, "tmp", "railcar.pid")) if File.exists?(File.join(path, "tmp", "railcar.pid"))
+
         @launched = false
         return true
       rescue
@@ -50,7 +60,7 @@ class RCApplicationInstance
   end
 
   def launched?
-    @launched
+    @launched || File.exist?(File.join(path, "tmp", "railcar.pid"))
   end
 
   def environments
@@ -71,6 +81,7 @@ class RCApplicationInstance
     end
   end
 
+  # TODO: switch this to a delegate setup so I can toss it to another thread
   def versionControlStatus
     if (File.exist?(File.join(@path, ".git")))
       gitStatus

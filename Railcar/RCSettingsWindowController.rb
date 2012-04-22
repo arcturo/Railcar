@@ -10,4 +10,8 @@ class RCMainWindowController < NSWindowController
   def windowDidLoad
     super
   end
+
+  def writeCliLink
+    
+  end
 end
