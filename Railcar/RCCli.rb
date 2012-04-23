@@ -189,4 +189,7 @@ class RCCli
   end
 end
 
-RCCli.new(ARGV)
+# If we're running the CLI
+if (__FILE__ == $0)
+  RCCli.new(ARGV)
+end
