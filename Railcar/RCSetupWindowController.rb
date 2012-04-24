@@ -24,6 +24,13 @@ class RCSetupWindowController < NSWindowController
 
     progressBar.incrementBy 10.0
   end
+  
+  def noCompilerNeeded
+    highlight(brewTitle, brewInfo)
+    brewTitle.setStringValue "Installing Homebrew"
+    
+    progressBar.incrementBy 10.0
+  end
 
   def brewInstalled
     fade(brewTitle, brewInfo)

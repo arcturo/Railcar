@@ -10,7 +10,11 @@ class RCBootstrapper
     puts("starting")
     if needsInstall?
       begin
-        checkForCompiler if buildFromSource?
+        if buildFromSource?
+          checkForCompiler
+        else
+          delegate.noCompilerNeeded
+        end
         
         if needsBrew?
           installBrew
@@ -64,6 +68,8 @@ class RCBootstrapper
     puts("installing brew")
     pathToScript = NSBundle.mainBundle.pathForResource('install_brew', ofType:"sh")
     
+    FileUtils.mkdir_p(File.join(NSBundle.mainBundle.bundlePath, "homebrew"))
+
     `/bin/sh #{pathToScript} #{BREW_DOWNLOAD_URL} #{NSBundle.mainBundle.bundlePath}`
     raise "Brew install failed!" if ($?.exitstatus > 0)
 

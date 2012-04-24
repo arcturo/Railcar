@@ -5,6 +5,5 @@
 #
 #  Created by Jeremy McAnally on 3/29/12.
 #  Copyright (c) 2012 Arcturo. All rights reserved.
-mkdir $2/homebrew
 cd $2
 curl -L $1 | tar xz --strip 1 -C homebrew
