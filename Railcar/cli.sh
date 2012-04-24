@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Borrowed trick from Stack Overflow
 export RAILCAR_PATH="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
 
 if [ "$1" = "init" ]
