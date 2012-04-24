@@ -7,33 +7,41 @@
 #
 
 class RCApplicationManager
+  def appsFile
+    File.join((ENV['RAILCAR_PATH'] || NSBundle.mainBundle.bundlePath), "application.yml")
+  end
+  
   def applications
-    NSUserDefaults.standardUserDefaults['railcar.linkedApplications'] ||= {}
-    NSUserDefaults.standardUserDefaults['railcar.linkedApplications']
+    if File.exist?(appsFile)
+      YAML.load_file(appsFile)
+    else
+      saveApplicationsList({})
+      {}
+    end
+  end
+
+  def saveApplicationsList(data)
+    File.open(appsFile, "w") do |f|
+      f.write(YAML.dump(data))
+    end
   end
 
   # We do the persistentDomainForName song and dance so the CLI can use this same code
   def addApplicationToList(data)
-    defaults = NSUserDefaults.standardUserDefaults.persistentDomainForName("com.arcturo.railcar")
+    newAppData = {}
+    newAppData[uniqueId(data)] = data
 
-    hsh = defaults.dup
-    hsh['railcar.linkedApplications'][uniqueId(data)] = data
-
-    NSUserDefaults.standardUserDefaults.setPersistentDomain(hsh, forName: "com.arcturo.railcar")
+    saveApplicationsList(applications.merge(newAppData))
   end
 
   def appDataForPath(path)
-    appList = NSUserDefaults.standardUserDefaults.persistentDomainForName("com.arcturo.railcar")['railcar.linkedApplications']
-
-    appList.values.select do |data|
+    applications.values.select do |data|
       data[:path] == path
     end.first
   end
 
   def appDataForName(name)
-    appList = NSUserDefaults.standardUserDefaults.persistentDomainForName("com.arcturo.railcar")['railcar.linkedApplications']
-
-    appList.values.select do |data|
+    applications.values.select do |data|
       data[:name] == name
     end.first
   end
@@ -42,17 +50,16 @@ class RCApplicationManager
     "#{Time.now.to_i}-#{data[:name].gsub(/\W/, '')}-#{data[:path].gsub(/\W/, '')}"
   end
 
-  # We do the persistentDomainForName song and dance so the CLI can use this same code
   def add(path, data = {})
     if isRailsApp?(path)
-      defaults = NSUserDefaults.standardUserDefaults.persistentDomainForName("com.arcturo.railcar")
-
+      newAppPort = (applications.empty? ? (applications.length + 3001) : 3000)
+      
       addApplicationToList({
         :name => discernAppName(path), 
         :path => path,
         :rubyVersion => DEFAULT_RUBY_VERSION,
         :environment => "development",
-        :port => (defaults['railcar.linkedApplications'].length + 3001).to_s
+        :port => ().to_s
       }.merge(data))
 
       true
